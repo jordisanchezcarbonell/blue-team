@@ -65,7 +65,10 @@ export async function Footer() {
       <div className="border-t-2 border-line">
         <Container className="flex flex-col gap-2 pb-20 pt-6 text-[10px] uppercase tracking-widest text-muted/70 sm:flex-row sm:justify-between">
           <span>© {siteConfig.recordsUntil} {siteConfig.name}</span>
-          <span>{siteConfig.claim}</span>
+          <span className="flex flex-wrap gap-x-6 gap-y-2">
+            <span>{siteConfig.claim}</span>
+            <Link href="/privacy" className="hover:text-snow">{t("privacy")}</Link>
+          </span>
         </Container>
       </div>
     </footer>

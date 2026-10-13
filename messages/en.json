@@ -37,7 +37,8 @@
     "sources": "Results verifiable on start.gg",
     "explore": "Explore",
     "work": "Work with us",
-    "brandNote": "Provisional name and identity."
+    "brandNote": "Provisional name and identity.",
+    "privacy": "Privacy"
   },
   "common": {
     "pending": "Pending",
@@ -282,7 +283,7 @@
     "bestResults": "Best results",
     "allResults": "All their results",
     "responsibilities": "Responsibilities",
-    "creatorPending": "Name, socials and portfolio to be published.",
+    "creatorPending": "Bio, socials and portfolio to be published.",
     "records": "{count} records on start.gg",
     "bios": {
       "kazukun": "Competitive fighting game player from Barcelona. He has competed at Evo Las Vegas and Evo France in titles such as Street Fighter V, Street Fighter 6, Ultra Street Fighter IV, Fatal Fury: City of the Wolves, Marvel Tōkon and Avatar Legends.",
@@ -442,7 +443,7 @@
     "messagePlaceholder": "Tell us about your brand, your goals and the kind of partnership you have in mind.",
     "submit": "Prepare email",
     "how": "This form doesn't send data to any server: it opens your email app with the message ready. You decide whether to send it.",
-    "opened": "We've opened your email app. If it didn't open, write to us at {email}.",
+    "opened": "We've opened your email app. If it didn't open, copy the message and send it to {email}.",
     "notConfigured": "The business email isn't configured on this site yet. Copy your message to send it through another channel.",
     "copy": "Copy message",
     "copied": "Message copied",
@@ -475,7 +476,7 @@
     "eyebrow": "In 30 seconds",
     "who": {
       "title": "Who we are",
-      "body": "Two brothers from Barcelona competing in fighting games since {since}, plus a creator who documents the journey."
+      "body": "Two brothers from Barcelona competing in fighting games since {since}, and Gise, the creator documenting the journey."
     },
     "results": {
       "title": "What we've done",
@@ -616,5 +617,129 @@
     "continue": "Continue?",
     "pressStart": "Partner up",
     "channels": "Channels"
+  },
+  "emailActions": {
+    "copy": "Copy email",
+    "copied": "Copied",
+    "pending": "Business email not configured yet",
+    "book": "Book a 15-min call"
+  },
+  "report": {
+    "eyebrow": "What your brand gets",
+    "title": "A report after every event",
+    "lead": "After each collaboration we send a report with real data read from each platform. This is the format; values are filled in after the event.",
+    "docTitle": "Post-event report",
+    "docFor": "For {brand}",
+    "docEvent": "Event",
+    "docEventValue": "Agreed event",
+    "pending": "After the event",
+    "source": "Source",
+    "sections": [
+      {
+        "title": "Competition",
+        "rows": [
+          {
+            "k": "Final placement / entrants",
+            "s": "start.gg"
+          },
+          {
+            "k": "Games and brackets played",
+            "s": "start.gg"
+          }
+        ]
+      },
+      {
+        "title": "Published content",
+        "rows": [
+          {
+            "k": "Pieces published and links",
+            "s": "Each platform"
+          },
+          {
+            "k": "Views per piece",
+            "s": "Platform analytics"
+          },
+          {
+            "k": "Engagement (likes, comments, shares)",
+            "s": "Platform analytics"
+          }
+        ]
+      },
+      {
+        "title": "Brand presence",
+        "rows": [
+          {
+            "k": "Photos with the brand (usage rights included)",
+            "s": "Team"
+          },
+          {
+            "k": "Stream minutes with the brand visible",
+            "s": "Stream recording"
+          }
+        ]
+      },
+      {
+        "title": "Response",
+        "rows": [
+          {
+            "k": "Link clicks / code uses",
+            "s": "Agreed link or code"
+          },
+          {
+            "k": "Learnings and proposal for the next action",
+            "s": "Team"
+          }
+        ]
+      }
+    ],
+    "note": "We never present the Evo event's own audience as ours."
+  },
+  "proposalPage": {
+    "eyebrow": "Proposal for {brand}",
+    "disclaimer": "Prepared for {brand}. It does not imply any current relationship with the brand; these are ideas to open the conversation and adapt to your goals.",
+    "fitTitle": "Why we fit",
+    "numbersTitle": "Who we are, in numbers",
+    "ideasTitle": "Activation ideas",
+    "deliverables": "Deliverables",
+    "tierTitle": "Where to start",
+    "tierBadge": "Recommended",
+    "kpisTitle": "What we'd measure for {brand}",
+    "calendarTitle": "{season} season",
+    "ctaTitle": "Shall we talk?",
+    "ctaBody": "We'll reply with a firm proposal (deliverables, schedule and budget) based on what {brand} is looking for.",
+    "ctaForm": "Write via the form",
+    "more": "See the full site",
+    "mediaKit": "Download media kit (PDF)"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "lead": "How data is handled on this site.",
+    "updated": "Last updated: {date}",
+    "sections": [
+      {
+        "title": "Controller",
+        "body": "{name}, an independent team of fighting game players from Barcelona. Contact: {email}."
+      },
+      {
+        "title": "Contact form",
+        "body": "The form sends no data to any server: it opens your email app with the message ready and you decide whether to send it. If you write to us, we use your email only to reply and manage the potential partnership."
+      },
+      {
+        "title": "Cookies",
+        "body": "This site uses no first-party or advertising cookies."
+      },
+      {
+        "title": "Analytics",
+        "body": "When enabled, we use Vercel Web Analytics, which measures visits in aggregate, without cookies and without identifying people. It tells us which pages are visited."
+      },
+      {
+        "title": "External content",
+        "body": "YouTube videos load in privacy-enhanced mode (youtube-nocookie.com). Links to start.gg, YouTube or Twitch lead to third-party sites with their own policies."
+      },
+      {
+        "title": "Your rights",
+        "body": "You can request access, correction or deletion of your data by writing to {email}."
+      }
+    ]
   }
 }

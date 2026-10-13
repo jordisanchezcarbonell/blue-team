@@ -5,7 +5,7 @@ import { PhotoPlaceholder } from "@/components/ui/pending-state";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { Link } from "@/i18n/navigation";
-import { players } from "@/data/team";
+import { creator, players } from "@/data/team";
 import { cn } from "@/lib/utils";
 
 export function TeamIntro() {
@@ -13,7 +13,7 @@ export function TeamIntro() {
   const c = useTranslations("common");
   const members = [
     ...players.map((p) => ({ id: p.id, name: p.handle, role: t("player"), accent: p.accent, games: p.games.slice(0, 3) })),
-    { id: "creator", name: "TBA", role: t("creator"), accent: "snow" as const, games: ["TikTok", "Reels", "Shorts"] },
+    { id: "creator", name: creator.name ?? "TBA", role: t("creator"), accent: "snow" as const, games: ["TikTok", "Reels", "Shorts"] },
   ];
 
   return (

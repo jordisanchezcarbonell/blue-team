@@ -1,12 +1,10 @@
-import { Mail } from "lucide-react";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { Suspense } from "react";
 import { ContactForm } from "@/components/contact/contact-form";
+import { EmailActions } from "@/components/contact/email-actions";
 import { PageHero } from "@/components/layout/page-hero";
-import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
-import { siteConfig } from "@/config/site";
 import type { Locale } from "@/i18n/routing";
 import { missingConfig } from "@/lib/env";
 import { buildMetadata } from "@/lib/seo";
@@ -19,7 +17,6 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/contact"
 export default function ContactPage() {
   const t = useTranslations("contactPage");
   const pk = useTranslations("packages");
-  const c = useTranslations("common");
 
   return (
     <>
@@ -48,13 +45,7 @@ export default function ContactPage() {
         <aside className="space-y-10">
           <div>
             <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-snow">{t("direct")}</h2>
-            {siteConfig.contactEmail ? (
-              <a href={`mailto:${siteConfig.contactEmail}`} className="mt-3 inline-flex items-center gap-2 text-lg text-cyan hover:underline">
-                <Mail aria-hidden className="size-5" /> {siteConfig.contactEmail}
-              </a>
-            ) : (
-              <Badge tone="warn" className="mt-3">{c("pending")}</Badge>
-            )}
+            <EmailActions source="contact" className="mt-3" />
             <p className="mt-3 text-sm text-muted">{t("response")}</p>
           </div>
           <div>

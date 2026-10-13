@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Dela_Gothic_One, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { locale as rootLocale } from "next/root-params";
@@ -6,6 +7,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { siteConfig } from "@/config/site";
 import { routing } from "@/i18n/routing";
+import { env } from "@/lib/env";
 import { jsonLd } from "@/lib/seo";
 import { players } from "@/data/team";
 import "../globals.css";
@@ -64,6 +66,7 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
         </a>
         <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(organization)} />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        {env.analytics && <Analytics />}
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
+import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 const TYPES = ["supporter", "event", "main", "other"] as const;
@@ -75,6 +76,7 @@ export function ContactForm() {
       setStatus("unconfigured");
       return;
     }
+    track("mailto_draft", { type: get("type") });
     window.location.href = `mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setStatus("opened");
   }
@@ -90,7 +92,7 @@ export function ContactForm() {
 
   return (
     <form ref={formRef} onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
-      <TextField name="company" label={t("company")} autoComplete="organization" error={errors.company} />
+      <TextField name="company" label={t("company")} autoComplete="organization" error={errors.company} defaultValue={searchParams.get("company") ?? undefined} />
       <TextField name="name" label={t("name")} autoComplete="name" error={errors.name} />
       <TextField name="email" type="email" label={t("email")} autoComplete="email" error={errors.email} className="sm:col-span-2" />
 
@@ -156,9 +158,13 @@ export function ContactForm() {
 
         <div role="status" aria-live="polite">
           {status === "opened" && (
-            <p className="bg-cyan/10 p-4 text-sm text-snow ring-1 ring-inset ring-cyan/30">
-              {t("opened", { email: siteConfig.contactEmail })}
-            </p>
+            <div className="space-y-3 bg-cyan/10 p-4 text-sm text-snow ring-1 ring-inset ring-cyan/30">
+              <p>{t("opened", { email: siteConfig.contactEmail })}</p>
+              <Button type="button" variant="secondary" onClick={copyDraft}>
+                {copied ? <Check aria-hidden className="size-4" /> : <Copy aria-hidden className="size-4" />}
+                {copied ? t("copied") : t("copy")}
+              </Button>
+            </div>
           )}
           {status === "unconfigured" && (
             <div className="space-y-3 bg-warn/10 p-4 text-sm text-snow ring-1 ring-inset ring-warn/30">
@@ -190,6 +196,7 @@ function TextField({
   type = "text",
   autoComplete,
   className,
+  defaultValue,
 }: {
   name: Field;
   label: string;
@@ -197,6 +204,7 @@ function TextField({
   type?: string;
   autoComplete?: string;
   className?: string;
+  defaultValue?: string;
 }) {
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
@@ -209,6 +217,7 @@ function TextField({
         type={type}
         required
         autoComplete={autoComplete}
+        defaultValue={defaultValue}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${name}-error` : undefined}
         className={inputClass(Boolean(error), "h-12")}

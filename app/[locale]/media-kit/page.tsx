@@ -3,7 +3,7 @@ import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { siteConfig } from "@/config/site";
 import { nextChallenge, type ExpenseKey } from "@/data/next-challenge";
 import { socialChannels } from "@/data/social";
-import { players } from "@/data/team";
+import { creator, players } from "@/data/team";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { env } from "@/lib/env";
@@ -97,7 +97,7 @@ export default function MediaKitPage() {
             );
           })}
           <div className="border-t-2 border-white/40 pt-3">
-            <p className="font-display text-[20pt] uppercase leading-none text-white/50">P3</p>
+            <p className="font-display text-[20pt] uppercase leading-none">{creator.name ?? "P3"}</p>
             <p className="mt-1 text-[8pt] text-muted">{t("teamIntro.creator")}</p>
             <p className="mt-2 text-[8.5pt] leading-snug text-snow/85">{t("teamPage.bios.creator")}</p>
           </div>

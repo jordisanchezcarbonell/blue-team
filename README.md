@@ -38,6 +38,9 @@ npm run build && npm start
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | En producción | URL pública (sin `/` final). Canonical, Open Graph, `sitemap.xml`, `robots.txt`. Por defecto `http://localhost:3000`. |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Recomendada | Email comercial. El formulario abre el cliente de correo (`mailto:`) dirigido a esta dirección. Vacía → la web muestra un estado explícito "no configurado". |
+| `NEXT_PUBLIC_BOOKING_URL` | Opcional | Enlace para agendar una llamada de 15 minutos (Calendly, Cal.com…). Aparece en `/contact` y en las propuestas por marca. |
+| `NEXT_PUBLIC_ANALYTICS` | Opcional | `true` activa Vercel Web Analytics (sin cookies). Actívalo también en el proyecto de Vercel. Registra visitas por página y eventos de conversión (copiar email, abrir correo, descargar media kit, agendar llamada). |
+| `NEXT_PUBLIC_STYLE_NAV` | Opcional | `false` oculta la barra flotante de estilos (hazlo antes de enviar la web a marcas). |
 
 El formulario **no envía datos a ningún servidor**. Para pasar a envío real (Resend, Formspree, etc.) habría que añadir una Server Action en `components/contact/` y documentar la nueva clave.
 
@@ -138,9 +141,9 @@ Cuando estén los 60 registros, actualiza también `documentedRecords` en `confi
 
 Copia las imágenes a `public/team/` y rellena `photo` en `data/team.ts`. Después sustituye `PhotoPlaceholder` por `next/image` en `components/home/team-intro.tsx` y `app/[locale]/team/page.tsx`. No uses imágenes de stock ni generadas presentadas como fotos del equipo.
 
-### Creadora de contenido
+### Creadora de contenido (Gise)
 
-Rellena `creator` en `data/team.ts` (nombre, redes) y la bio en `messages/*.json → teamPage.bios.creator`.
+`creator` en `data/team.ts` (alias, redes) y la bio en `messages/*.json → teamPage.bios.creator`.
 
 ### Portfolio
 
@@ -149,6 +152,15 @@ Añade piezas reales a `contentItems` en `data/content.ts`. YouTube se incrusta 
 ### Redes del equipo
 
 `config/site.ts → social`. Las vacías no se muestran.
+
+## Vender: propuestas por marca, informe y outreach
+
+- **Propuesta por marca**: `/[locale]/proposal/<marca>` (no indexada, se comparte por enlace). Contenido en `data/proposals.ts`: por qué encajamos, ideas de activación con entregables, modalidad recomendada y qué se mediría. Ahora hay `pccomponentes`, `razer` y `hori`; para añadir una marca, copia una entrada. Sin logos ni relación implícita con la marca.
+- **Informe post-evento**: `components/partners/report-sample.tsx`. Es la plantilla de lo que recibe un patrocinador, sin cifras inventadas; aparece en `/partners` y en cada propuesta.
+- **Contacto**: email visible con botón de copiar (`components/contact/email-actions.tsx`), enlace para agendar llamada opcional y formulario `mailto` que admite `?company=` y `?type=`.
+- **Medición**: con `NEXT_PUBLIC_ANALYTICS=true`, las visitas a cada `/proposal/<marca>` indican si la marca abrió su propuesta. Los eventos están en `lib/analytics.ts`.
+- **Privacidad**: `/privacy`. Revisa el texto si cambias la analítica o añades envío de formulario por servidor.
+- **Emails de contacto y seguimiento**: `docs/outreach.md` (ES/EN).
 
 ## Despliegue en Vercel
 

@@ -6,6 +6,7 @@ import { HighlightResults } from "@/components/home/highlight-results";
 import { SponsorBenefits } from "@/components/home/sponsor-benefits";
 import { StatsBand } from "@/components/home/stats-band";
 import { PageHero } from "@/components/layout/page-hero";
+import { ReportSample } from "@/components/partners/report-sample";
 import { Packages } from "@/components/partners/packages";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
@@ -86,6 +87,7 @@ export default function PartnersPage() {
       <HighlightResults />
       <SponsorBenefits />
       <Packages />
+      <ReportSample className="border-t-2 border-line" />
 
       <Container className="space-y-24">
         <section aria-labelledby="process-title">

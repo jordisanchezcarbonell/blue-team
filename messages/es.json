@@ -37,7 +37,8 @@
     "sources": "Resultados verificables en start.gg",
     "explore": "Explorar",
     "work": "Colaborar",
-    "brandNote": "Nombre e identidad provisionales."
+    "brandNote": "Nombre e identidad provisionales.",
+    "privacy": "Privacidad"
   },
   "common": {
     "pending": "Pendiente",
@@ -282,7 +283,7 @@
     "bestResults": "Mejores resultados",
     "allResults": "Todos sus resultados",
     "responsibilities": "Responsabilidades",
-    "creatorPending": "Nombre, redes y portfolio pendientes de publicar.",
+    "creatorPending": "Bio, redes y portfolio pendientes de publicar.",
     "records": "{count} registros en start.gg",
     "bios": {
       "kazukun": "Jugador competitivo de juegos de lucha de Barcelona. Ha competido en EVO Las Vegas y EVO France en títulos como Street Fighter V, Street Fighter 6, Ultra Street Fighter IV, Fatal Fury: City of the Wolves, Marvel Tōkon y Avatar Legends.",
@@ -442,7 +443,7 @@
     "messagePlaceholder": "Cuéntanos tu marca, objetivos y el tipo de colaboración que imaginas.",
     "submit": "Preparar email",
     "how": "Este formulario no envía datos a ningún servidor: abre tu aplicación de correo con el mensaje listo. Tú decides si lo envías.",
-    "opened": "Hemos abierto tu cliente de correo. Si no se abrió, escríbenos a {email}.",
+    "opened": "Hemos abierto tu aplicación de correo. Si no se ha abierto, copia el mensaje y envíalo a {email}.",
     "notConfigured": "El email comercial aún no está configurado en esta web. Copia tu mensaje para enviarlo por otro canal.",
     "copy": "Copiar mensaje",
     "copied": "Mensaje copiado",
@@ -475,7 +476,7 @@
     "eyebrow": "En 30 segundos",
     "who": {
       "title": "Quiénes somos",
-      "body": "Dos hermanos de Barcelona que compiten en juegos de lucha desde {since}, y una creadora que documenta el viaje."
+      "body": "Dos hermanos de Barcelona que compiten en juegos de lucha desde {since}, y Gise, la creadora que documenta el viaje."
     },
     "results": {
       "title": "Qué hemos hecho",
@@ -616,5 +617,129 @@
     "continue": "¿Continuar?",
     "pressStart": "Partner up",
     "channels": "Canales"
+  },
+  "emailActions": {
+    "copy": "Copiar email",
+    "copied": "Copiado",
+    "pending": "Email comercial pendiente de configurar",
+    "book": "Agendar llamada de 15 min"
+  },
+  "report": {
+    "eyebrow": "Qué recibe tu marca",
+    "title": "Un informe después de cada evento",
+    "lead": "Tras cada colaboración enviamos un informe con datos reales leídos de cada plataforma. Este es el formato; los valores se rellenan después del evento.",
+    "docTitle": "Informe post-evento",
+    "docFor": "Para {brand}",
+    "docEvent": "Evento",
+    "docEventValue": "Evento acordado",
+    "pending": "Tras el evento",
+    "source": "Fuente",
+    "sections": [
+      {
+        "title": "Competición",
+        "rows": [
+          {
+            "k": "Posición final / participantes",
+            "s": "start.gg"
+          },
+          {
+            "k": "Juegos y brackets disputados",
+            "s": "start.gg"
+          }
+        ]
+      },
+      {
+        "title": "Contenido publicado",
+        "rows": [
+          {
+            "k": "Piezas publicadas y enlaces",
+            "s": "Cada plataforma"
+          },
+          {
+            "k": "Visualizaciones por pieza",
+            "s": "Analíticas de la plataforma"
+          },
+          {
+            "k": "Interacción (likes, comentarios, compartidos)",
+            "s": "Analíticas de la plataforma"
+          }
+        ]
+      },
+      {
+        "title": "Presencia de marca",
+        "rows": [
+          {
+            "k": "Fotos con la marca (con derechos de uso)",
+            "s": "Equipo"
+          },
+          {
+            "k": "Minutos de stream con la marca visible",
+            "s": "Grabación del stream"
+          }
+        ]
+      },
+      {
+        "title": "Respuesta",
+        "rows": [
+          {
+            "k": "Clics en el enlace / usos del código",
+            "s": "Enlace o código acordado"
+          },
+          {
+            "k": "Aprendizajes y propuesta para la siguiente acción",
+            "s": "Equipo"
+          }
+        ]
+      }
+    ],
+    "note": "Nunca incluimos la audiencia del propio evento EVO como si fuera nuestra."
+  },
+  "proposalPage": {
+    "eyebrow": "Propuesta para {brand}",
+    "disclaimer": "Documento preparado para {brand}. No implica ninguna relación actual con la marca; son ideas para abrir la conversación y adaptarlas a vuestros objetivos.",
+    "fitTitle": "Por qué encajamos",
+    "numbersTitle": "Quiénes somos, en datos",
+    "ideasTitle": "Ideas de activación",
+    "deliverables": "Entregables",
+    "tierTitle": "Por dónde empezar",
+    "tierBadge": "Recomendado",
+    "kpisTitle": "Qué mediríamos para {brand}",
+    "calendarTitle": "Temporada {season}",
+    "ctaTitle": "¿Hablamos?",
+    "ctaBody": "Respondemos con una propuesta cerrada (entregables, calendario y presupuesto) en función de lo que busque {brand}.",
+    "ctaForm": "Escribir con el formulario",
+    "more": "Ver la web completa",
+    "mediaKit": "Descargar media kit (PDF)"
+  },
+  "privacy": {
+    "title": "Privacidad",
+    "lead": "Cómo tratamos los datos en esta web.",
+    "updated": "Última actualización: {date}",
+    "sections": [
+      {
+        "title": "Responsable",
+        "body": "{name}, equipo independiente de jugadores de juegos de lucha de Barcelona. Contacto: {email}."
+      },
+      {
+        "title": "Formulario de contacto",
+        "body": "El formulario no envía datos a ningún servidor: abre tu aplicación de correo con el mensaje preparado y tú decides si lo envías. Si nos escribes, usamos tu email solo para responderte y gestionar la posible colaboración."
+      },
+      {
+        "title": "Cookies",
+        "body": "Esta web no usa cookies propias ni de publicidad."
+      },
+      {
+        "title": "Analítica",
+        "body": "Si está activada, usamos Vercel Web Analytics, que mide visitas de forma agregada y sin cookies, sin identificar a personas. Sirve para saber qué páginas se visitan."
+      },
+      {
+        "title": "Contenido externo",
+        "body": "Los vídeos de YouTube se cargan en modo de privacidad mejorada (youtube-nocookie.com). Los enlaces a start.gg, YouTube o Twitch llevan a webs de terceros con sus propias políticas."
+      },
+      {
+        "title": "Tus derechos",
+        "body": "Puedes pedir acceso, rectificación o supresión de tus datos escribiendo a {email}."
+      }
+    ]
   }
 }

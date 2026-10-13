@@ -15,7 +15,7 @@ export interface PlayerProfile {
 
 export interface CreatorProfile {
   id: "creator";
-  /** Unknown until the team provides it. */
+  /** Alias shown on the site. `null` = not provided yet. */
   name: string | null;
   role: "creator";
   photo: string | null;
@@ -74,7 +74,7 @@ export const players: PlayerProfile[] = [
 
 export const creator: CreatorProfile = {
   id: "creator",
-  name: null,
+  name: "Gise",
   role: "creator",
   photo: null,
   social: {},

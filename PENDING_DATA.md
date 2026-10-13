@@ -5,8 +5,12 @@ Lista de lo que falta para tener la versión definitiva. La web funciona sin ell
 ## Prioridad alta (afecta a la conversión)
 
 - [ ] **Email comercial** → `NEXT_PUBLIC_CONTACT_EMAIL`. Sin él, el formulario no puede abrir el correo.
-- [ ] **Fotos reales** de Kazukun, BlueKen y la creadora (retrato vertical 4:5, mínimo 1200 px de alto). Idealmente también fotos en EVO.
-- [ ] **Creadora de contenido**: nombre o alias, bio, redes y 3–6 piezas de portfolio.
+- [ ] **Fotos reales** de Kazukun, BlueKen y Gise (retrato vertical 4:5, mínimo 1200 px de alto). Idealmente también fotos en EVO.
+- [x] Alias de la creadora: **Gise**.
+- [ ] **Gise**: bio propia, redes y 3–6 piezas de portfolio.
+- [ ] **Enlace de agenda** (opcional) → `NEXT_PUBLIC_BOOKING_URL`.
+- [ ] Activar **analítica** (`NEXT_PUBLIC_ANALYTICS=true` + Vercel Analytics) antes de enviar propuestas.
+- [ ] Revisar las **propuestas por marca** (`data/proposals.ts`) y añadir las marcas a las que vayáis a escribir.
 - [x] YouTube (@ElMovimentOndulatori) y Twitch (elmovimentondulatori) añadidos.
 - [ ] **Seguidores de Twitch** (panel de creador) y, si existen, Instagram/TikTok → `data/social.ts`.
 - [ ] **Presupuesto 2027** por concepto → `data/next-challenge.ts`.
@@ -39,7 +43,8 @@ Lista de lo que falta para tener la versión definitiva. La web funciona sin ell
 
 ## Legal
 
-- [ ] Aviso legal / política de privacidad (si se añade analítica o envío de formulario por servidor).
+- [x] Página de privacidad básica en `/privacy`.
+- [ ] Revisar `/privacy` (y si hace falta, un aviso legal) con alguien de confianza antes del lanzamiento.
 - [ ] Revisar con cada marca el uso de su logo antes de mostrarlo como partner.
 
 ## Fuentes EVO usadas (verificadas el 13/10/2026)

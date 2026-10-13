@@ -7,6 +7,10 @@ export const env = {
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   /** Floating style navigation (main site ↔ design proposals). Set "false" before sending to brands. */
   showStyleNav: process.env.NEXT_PUBLIC_STYLE_NAV !== "false",
+  /** Optional scheduling link (Calendly, Cal.com, Google Calendar…) for a 15-minute intro call. */
+  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? "",
+  /** Vercel Web Analytics (cookieless). Enable it in the Vercel dashboard too. */
+  analytics: process.env.NEXT_PUBLIC_ANALYTICS === "true",
 };
 
 export const missingConfig = [
@@ -17,5 +21,9 @@ export const missingConfig = [
   !env.siteUrl && {
     key: "NEXT_PUBLIC_SITE_URL",
     why: "URL pública para canonical, Open Graph, sitemap y robots.",
+  },
+  !env.bookingUrl && {
+    key: "NEXT_PUBLIC_BOOKING_URL",
+    why: "Opcional: enlace para agendar una llamada de 15 minutos (Calendly, Cal.com…).",
   },
 ].filter(Boolean) as { key: string; why: string }[];

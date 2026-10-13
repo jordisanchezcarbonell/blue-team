@@ -8,7 +8,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { PendingState, PhotoPlaceholder } from "@/components/ui/pending-state";
 import { ContactCta } from "@/components/home/contact-cta";
-import { players, type PlayerProfile } from "@/data/team";
+import { creator, players, type PlayerProfile } from "@/data/team";
 import { siteConfig } from "@/config/site";
 import type { Locale } from "@/i18n/routing";
 import { getPlayerResults } from "@/lib/results/repository";
@@ -44,11 +44,11 @@ export default function TeamPage() {
         ))}
 
         <section id="creator" aria-labelledby="creator-title" className="scroll-mt-24 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <PhotoPlaceholder label={c("pendingPhoto")} initials="C" accent="snow" className="aspect-[4/5]" />
+          <PhotoPlaceholder label={c("pendingPhoto")} initials={creator.name ? creator.name.slice(0, 2).toUpperCase() : "C"} accent="snow" className="aspect-[4/5]" />
           <div className="self-center">
-            <p className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-muted">{c("pending")}</p>
+            <p className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-muted">{creator.name ? ti("creator") : c("pending")}</p>
             <h2 id="creator-title" className="mt-2 font-display text-[clamp(2.2rem,10vw,3.75rem)] uppercase leading-none text-snow">
-              {ti("creator")}
+              {creator.name ?? ti("creator")}
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{t("bios.creator")}</p>
             <h3 className="mt-8 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-snow">{t("responsibilities")}</h3>

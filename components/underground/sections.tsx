@@ -1,5 +1,6 @@
 import { Download } from "lucide-react";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
+import { TrackedAnchor } from "@/components/analytics/tracked-anchor";
 import { PhotoSlot, VideoSlot } from "@/components/elite/media-slot";
 import { siteConfig } from "@/config/site";
 import { journeyYears } from "@/data/journey";
@@ -517,13 +518,15 @@ export function UgTiers() {
             <p className="mt-3 max-w-xl text-sm text-muted">{t("mediaKit.body")}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <a
+            <TrackedAnchor
+              event="media_kit_download"
+              props={{ source: "home" }}
               href={`/media-kit/beyond-the-fight-media-kit-${locale}.pdf`}
               download
               className="inline-flex items-center justify-center gap-2 bg-snow px-6 py-4 text-sm font-bold uppercase tracking-wider text-ink transition-colors hover:bg-cyan"
             >
               <Download aria-hidden className="size-4" /> {t("mediaKit.download")}
-            </a>
+            </TrackedAnchor>
             <Link href="/media-kit" className="text-center text-xs text-muted underline underline-offset-4 hover:text-snow">
               {t("mediaKit.view")}
             </Link>
