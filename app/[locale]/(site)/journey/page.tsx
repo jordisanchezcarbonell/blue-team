@@ -27,7 +27,7 @@ export default function JourneyPage() {
     <>
       <PageHero eyebrow={t("eyebrow")} title={<span className="text-gradient">{t("title")}</span>} lead={t("lead")} />
 
-      <nav aria-label={t("jump")} className="sticky top-16 z-30 border-y border-line bg-ink/85 backdrop-blur-xl">
+      <nav aria-label={t("jump")} className="sticky top-14 z-30 border-y-2 border-line bg-ink/95 backdrop-blur">
         <Container>
           <ul className="flex gap-1 overflow-x-auto py-2 [scrollbar-width:none]">
             {journeyYears.map(({ year, status }) => (
@@ -49,7 +49,7 @@ export default function JourneyPage() {
 
       <Container className="py-16">
         <ol className="relative">
-          <div aria-hidden className="absolute bottom-0 left-[7px] top-2 w-px bg-gradient-to-b from-cyan via-[#a7a0ff] to-magenta md:left-[calc(9rem+7px)]" />
+          <div aria-hidden className="absolute bottom-0 left-[7px] top-2 w-0.5 bg-line md:left-[calc(9rem+7px)]" />
           {journeyYears.map(({ year, status }) => {
             const results = getResults({ year, sort: "best" });
             return (
@@ -61,7 +61,7 @@ export default function JourneyPage() {
                     status === "pending" ? "border-2 border-warn bg-ink" : "bg-cyan shadow-[0_0_20px_var(--color-cyan)]",
                   )}
                 />
-                <h2 className={cn("font-display text-5xl leading-none md:text-right", status === "pending" ? "text-outline" : "text-snow")}>
+                <h2 className={cn("font-display text-4xl leading-none md:pr-4 md:text-right", status === "pending" ? "text-outline" : "text-snow")}>
                   {year}
                 </h2>
                 <Reveal className="mt-4 md:mt-0 md:pl-10">
@@ -71,7 +71,7 @@ export default function JourneyPage() {
                   </div>
                   <p className="mt-2 max-w-2xl text-muted">{tl(`years.${year}.body`)}</p>
                   {results.length > 0 && (
-                    <div className="clip-corner mt-6 max-w-3xl bg-surface px-5 py-2 ring-1 ring-inset ring-line">
+                    <div className="mt-6 max-w-3xl bg-surface px-5 py-2 ring-1 ring-inset ring-line">
                       <p className="pt-3 font-heading text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
                         {t("resultsIn")}
                       </p>

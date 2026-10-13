@@ -78,7 +78,7 @@ export function EvoExplainer({ full = false }: { full?: boolean }) {
           </ol>
         )}
 
-        <aside className="clip-corner mt-14 flex flex-col gap-4 bg-warn/[0.06] p-6 ring-1 ring-inset ring-warn/30 sm:flex-row sm:p-8">
+        <aside className="mt-14 flex flex-col gap-4 bg-warn/[0.06] p-6 ring-1 ring-inset ring-warn/30 sm:flex-row sm:p-8">
           <AlertTriangle aria-hidden className="size-6 shrink-0 text-warn" />
           <div>
             <h3 className="font-heading font-semibold text-snow">{t("audienceTitle")}</h3>

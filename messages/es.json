@@ -595,5 +595,26 @@
     "tiersTitle": "Modalidades de patrocinio",
     "ctaTitle": "Sponsor our journey",
     "player": "Jugador · Barcelona"
+  },
+  "ugHome": {
+    "select": "Selecciona jugador",
+    "creator": "Creadora",
+    "creatorRole": "Cámara · Edición · Redes",
+    "games": "Juegos",
+    "best": "Mejores resultados",
+    "profile": "Ver perfil",
+    "healthTitle": "Barras de vida",
+    "healthLead": "Posición final en cada bracket de EVO. Barra llena = arriba del todo. Cada torneo, por separado.",
+    "stageSelect": "Stage select",
+    "stage": "Stage",
+    "nextStage": "Siguiente stage",
+    "round": "Round",
+    "replayTitle": "Replays & contenido",
+    "portfolioPending": "Portfolio pendiente",
+    "tiersTitle": "Elige tu nivel",
+    "level": "Nivel",
+    "continue": "¿Continuar?",
+    "pressStart": "Partner up",
+    "channels": "Canales"
   }
 }

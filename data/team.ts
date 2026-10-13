@@ -41,7 +41,7 @@ export const players: PlayerProfile[] = [
     ],
     events: ["EVO Las Vegas", "EVO France", "HFSPlay"],
     photo: null,
-    accent: "cyan",
+    accent: "magenta",
   },
   {
     id: "blueken",
@@ -68,7 +68,7 @@ export const players: PlayerProfile[] = [
       "Barcelona locals",
     ],
     photo: null,
-    accent: "magenta",
+    accent: "cyan",
   },
 ];
 

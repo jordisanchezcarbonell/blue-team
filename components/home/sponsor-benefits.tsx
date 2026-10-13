@@ -17,7 +17,7 @@ export function SponsorBenefits() {
 
   return (
     <section className="relative isolate overflow-hidden py-24 sm:py-32">
-      <div aria-hidden className="absolute left-1/2 top-0 -z-10 h-[30rem] w-[60rem] -translate-x-1/2 rounded-full bg-magenta/10 blur-[120px]" />
+      <div aria-hidden className="bg-halftone absolute -left-10 top-0 -z-10 size-[24rem] text-magenta opacity-20 [mask-image:radial-gradient(circle,black,transparent_70%)]" />
       <Container>
         <SectionHeading eyebrow={t("eyebrow")} title={<span className="text-gradient">{t("title")}</span>} body={t("body")} />
         <ul className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">

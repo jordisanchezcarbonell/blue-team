@@ -30,7 +30,7 @@ export function ResultsTable({ results, caption }: { results: Result[]; caption:
         </thead>
         <tbody>
           {results.map((r) => {
-            const accent = r.player === "kazukun" ? "text-cyan" : "text-magenta";
+            const accent = r.player === "kazukun" ? "text-magenta" : "text-cyan";
             return (
               <tr key={r.id} className="border-t border-line transition-colors hover:bg-surface/60">
                 <td className="px-4 py-3.5 font-heading font-semibold text-muted">{r.year}</td>

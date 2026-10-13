@@ -10,7 +10,7 @@ import { PlacementBar } from "./result-card";
 export function ResultRow({ result }: { result: Result }) {
   const t = useTranslations("common");
   const locale = useLocale();
-  const accent = result.player === "kazukun" ? "text-cyan" : "text-magenta";
+  const accent = result.player === "kazukun" ? "text-magenta" : "text-cyan";
   return (
     <li className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 border-b border-line py-3 last:border-0">
       <div className="min-w-0">

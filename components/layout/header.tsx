@@ -54,30 +54,25 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b transition-colors duration-300",
-        scrolled || open
-          ? "border-line bg-ink/85 backdrop-blur-xl"
-          : "border-transparent bg-transparent",
+        "sticky top-0 z-50 border-b-2 transition-colors duration-300",
+        scrolled || open ? "border-line bg-ink/95 backdrop-blur" : "border-transparent bg-ink",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-10">
         <Link href="/" className="shrink-0" aria-label="Home">
           <Logo />
         </Link>
 
         <nav aria-label={t("main")} className="hidden lg:block">
-          <ul className="flex items-center gap-1">
-            {navItems.map((item) => (
+          <ul className="flex items-center gap-0.5">
+            {navItems.map((item, i) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   aria-current={isActive(item.href) ? "page" : undefined}
-                  className={cn(
-                    "relative px-3 py-2 font-heading text-sm font-medium text-muted transition-colors hover:text-snow",
-                    "aria-[current=page]:text-snow aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-3 aria-[current=page]:after:-bottom-[13px] aria-[current=page]:after:h-0.5 aria-[current=page]:after:bg-cyan",
-                  )}
+                  className="block whitespace-nowrap px-2 py-1.5 font-heading text-xs uppercase tracking-wider text-snow/60 transition-colors hover:bg-cyan hover:text-ink aria-[current=page]:bg-snow aria-[current=page]:text-ink"
                 >
-                  {t(item.key)}
+                  <span className="hidden opacity-60 xl:inline">[{String(i + 1).padStart(2, "0")}] </span>{t(item.key)}
                 </Link>
               </li>
             ))}
@@ -89,12 +84,15 @@ export function Header() {
             href={pathname}
             locale={otherLocale}
             aria-label={t("switchTo")}
-            className="grid h-9 min-w-9 place-items-center rounded-sm px-2 font-heading text-xs font-bold uppercase tracking-wider text-muted ring-1 ring-inset ring-line transition-colors hover:text-snow hover:ring-cyan"
+            className="grid h-9 min-w-9 place-items-center px-2 font-heading text-xs font-bold uppercase tracking-wider text-muted ring-2 ring-inset ring-line transition-colors hover:text-snow hover:ring-cyan"
           >
             {otherLocale}
           </Link>
-          <Link href="/partners" className={buttonClasses("primary", "md", "hidden sm:inline-flex")}>
-            {t("cta")}
+          <Link
+            href="/partners"
+            className="group hidden items-center gap-2 whitespace-nowrap bg-cyan px-4 py-2 font-heading text-xs font-bold uppercase tracking-wider text-ink sm:flex"
+          >
+            {t("cta")} <span aria-hidden className="transition-transform group-hover:translate-x-1">▶</span>
           </Link>
           <button
             ref={toggleRef}
@@ -114,7 +112,7 @@ export function Header() {
         id="mobile-nav"
         aria-label={t("main")}
         hidden={!open}
-        className="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-ink lg:hidden"
+        className="h-[calc(100dvh-3.5rem)] overflow-y-auto border-t-2 border-line bg-ink lg:hidden"
       >
         <ul className="flex flex-col px-4 py-6 sm:px-6">
           {[{ href: "/", key: "home" } as const, ...navItems].map((item, i) => (
@@ -122,9 +120,9 @@ export function Header() {
               <Link
                 href={item.href}
                 aria-current={(item.href === "/" ? pathname === "/" : isActive(item.href)) ? "page" : undefined}
-                className="flex items-baseline gap-4 py-4 font-display text-3xl uppercase text-snow aria-[current=page]:text-cyan"
+                className="flex items-baseline gap-4 py-4 font-display text-[1.75rem] uppercase text-snow aria-[current=page]:text-cyan"
               >
-                <span className="font-heading text-xs text-muted">{String(i).padStart(2, "0")}</span>
+                <span className="font-heading text-xs text-muted">[{String(i).padStart(2, "0")}]</span>
                 {t(item.key)}
               </Link>
             </li>
@@ -132,7 +130,7 @@ export function Header() {
         </ul>
         <div className="px-4 pb-10 sm:px-6">
           <Link href="/partners" className={buttonClasses("primary", "lg", "w-full")}>
-            {t("cta")}
+            {t("cta")} ▶
           </Link>
         </div>
       </nav>

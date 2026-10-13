@@ -26,7 +26,7 @@ export function TeamIntro() {
               <Reveal delay={i * 0.08}>
                 <Link
                   href={`/team#${m.id}`}
-                  className="clip-corner group block bg-surface ring-1 ring-inset ring-line transition-colors hover:ring-cyan/60"
+                  className="group block bg-surface ring-1 ring-inset ring-line transition-colors hover:ring-cyan/60"
                 >
                   <PhotoPlaceholder
                     label={c("pendingPhoto")}

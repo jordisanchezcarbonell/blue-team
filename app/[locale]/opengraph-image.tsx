@@ -19,21 +19,21 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "#070910",
+          background: "#0E0E0D",
           backgroundImage:
             "radial-gradient(circle at 85% 10%, rgba(253,75,157,0.35), transparent 45%), radial-gradient(circle at 10% 90%, rgba(86,215,255,0.28), transparent 45%)",
-          color: "#F6F7FB",
+          color: "#EFEAE0",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", fontSize: 26, letterSpacing: 6, color: "#56D7FF", fontWeight: 700 }}>
+        <div style={{ display: "flex", fontSize: 26, letterSpacing: 6, color: "#D7FF3C", fontWeight: 700 }}>
           {siteConfig.name}
         </div>
         <div style={{ display: "flex", flexDirection: "column", fontSize: 110, fontWeight: 900, lineHeight: 0.95, letterSpacing: -2 }}>
           <span>{line1}</span>
-          <span style={{ color: "#FD4B9D" }}>{line2}</span>
+          <span style={{ color: "#FF3355" }}>{line2}</span>
         </div>
-        <div style={{ display: "flex", fontSize: 26, letterSpacing: 4, color: "#A2AAB9" }}>
+        <div style={{ display: "flex", fontSize: 26, letterSpacing: 4, color: "#A8A398" }}>
           {siteConfig.subClaim}
         </div>
       </div>

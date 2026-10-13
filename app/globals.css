@@ -1,19 +1,26 @@
 @import "tailwindcss";
 
+/*
+ * Main theme = "C · FGC Underground": asphalt, paper, acid, signal red.
+ * Token names are semantic slots kept from the first iteration:
+ *   cyan    → primary accent (acid)      magenta → secondary accent (signal red)
+ *   ink     → page background (asphalt)  snow    → foreground (paper)
+ * `.theme-elite` below restores the original palette for the A proposal in /designs.
+ */
 @theme {
-  --color-ink: #070910;
-  --color-surface: #121725;
-  --color-surface-2: #1a2133;
-  --color-line: #232b3f;
-  --color-cyan: #56d7ff;
-  --color-magenta: #fd4b9d;
-  --color-snow: #f6f7fb;
-  --color-muted: #a2aab9;
-  --color-warn: #ffc857;
+  --color-ink: #0e0e0d;
+  --color-surface: #181816;
+  --color-surface-2: #22211e;
+  --color-line: #2f2e2a;
+  --color-cyan: #d7ff3c;
+  --color-magenta: #ff3355;
+  --color-snow: #efeae0;
+  --color-muted: #a8a398;
+  --color-warn: #ff9f1c;
 
-  --font-display: var(--font-saira), "Arial Narrow", sans-serif;
-  --font-heading: var(--font-space-grotesk), system-ui, sans-serif;
-  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-dela), "Arial Black", sans-serif;
+  --font-heading: var(--font-jbmono), ui-monospace, monospace;
+  --font-sans: var(--font-jbmono), ui-monospace, monospace;
 
   --animate-marquee: marquee 40s linear infinite;
   --animate-dash: dash 3.5s ease-in-out forwards;
@@ -48,7 +55,6 @@
   :focus-visible {
     outline: 2px solid var(--color-cyan);
     outline-offset: 3px;
-    border-radius: 4px;
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -60,11 +66,25 @@
   }
 }
 
+/* Original palette, used only by the "A · Esports Elite" proposal. */
+.theme-elite {
+  --color-ink: #070910;
+  --color-surface: #121725;
+  --color-surface-2: #1a2133;
+  --color-line: #232b3f;
+  --color-cyan: #56d7ff;
+  --color-magenta: #fd4b9d;
+  --color-snow: #f6f7fb;
+  --color-muted: #a2aab9;
+  --color-warn: #ffc857;
+  --font-heading: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Highlighted figures. Flat acid in the Underground theme (no gradients). */
 @utility text-gradient {
-  background-image: linear-gradient(100deg, var(--color-cyan) 0%, #a7a0ff 45%, var(--color-magenta) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-cyan);
 }
 
 @utility text-outline {
@@ -82,6 +102,12 @@
 
 @utility bg-noise {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+/* Comic halftone dots in the current text colour (C · Underground). */
+@utility bg-halftone {
+  background-image: radial-gradient(currentColor 1px, transparent 1.4px);
+  background-size: 7px 7px;
 }
 
 /* Angled corner used on cards/buttons — fighting-game HUD feel without going sci-fi. */

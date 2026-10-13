@@ -40,7 +40,7 @@ export default function ContactPage() {
         </Container>
       )}
       <Container className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
-        <div className="clip-corner relative bg-surface/50 p-6 ring-1 ring-inset ring-line sm:p-10">
+        <div className="relative bg-surface/50 p-6 ring-1 ring-inset ring-line sm:p-10">
           <Suspense fallback={<div className="h-[36rem]" aria-hidden />}>
             <ContactForm />
           </Suspense>

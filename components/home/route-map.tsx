@@ -14,7 +14,7 @@ const colors = { snow: "#F6F7FB", muted: "#A2AAB9", cyan: "#56D7FF", magenta: "#
 export function RouteMap({ label }: { label: string }) {
   return (
     <figure className="relative mx-auto w-full max-w-md lg:max-w-none">
-      <div className="clip-corner relative bg-surface/60 p-5 ring-1 ring-inset ring-line backdrop-blur">
+      <div className="relative bg-surface/60 p-5 ring-1 ring-inset ring-line backdrop-blur">
         <figcaption className="flex items-center justify-between font-heading text-[10px] font-semibold uppercase tracking-[0.25em] text-muted">
           <span>{label}</span>
           <span className="text-cyan">2018—2026</span>

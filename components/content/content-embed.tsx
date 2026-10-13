@@ -14,7 +14,7 @@ export function ContentEmbed({ item }: { item: ContentItem }) {
   const yt = item.platform === "youtube" ? youtubeId(item.url) : null;
 
   return (
-    <article className="clip-corner overflow-hidden bg-surface ring-1 ring-inset ring-line">
+    <article className="overflow-hidden bg-surface ring-1 ring-inset ring-line">
       {yt ? (
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${yt}`}

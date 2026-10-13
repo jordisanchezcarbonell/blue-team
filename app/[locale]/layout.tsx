@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Saira_Condensed, Space_Grotesk } from "next/font/google";
+import { Dela_Gothic_One, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { locale as rootLocale } from "next/root-params";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -10,10 +10,9 @@ import { jsonLd } from "@/lib/seo";
 import { players } from "@/data/team";
 import "../globals.css";
 
-// Esports Elite display face. Single heavy weight so every `font-display` heading renders at 800.
-const display = Saira_Condensed({ weight: "800", subsets: ["latin", "latin-ext"], variable: "--font-saira", display: "swap" });
-const heading = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
-const body = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+// "C · FGC Underground": Dela Gothic One for display, JetBrains Mono for everything else.
+const display = Dela_Gothic_One({ weight: "400", subsets: ["latin", "latin-ext"], variable: "--font-dela", display: "swap" });
+const mono = JetBrains_Mono({ subsets: ["latin", "latin-ext"], variable: "--font-jbmono", display: "swap" });
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -31,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#070910",
+  themeColor: "#0E0E0D",
   colorScheme: "dark",
 };
 
@@ -55,7 +54,7 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
   };
 
   return (
-    <html lang={locale} className={`${display.variable} ${heading.variable} ${body.variable} antialiased`}>
+    <html lang={locale} className={`${display.variable} ${mono.variable} antialiased`}>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"

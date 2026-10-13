@@ -34,10 +34,10 @@ export default function MediaKitPage() {
   const url = env.siteUrl.replace(/^https?:\/\//, "");
 
   return (
-    <div className="min-h-dvh bg-[#2a2f3a] py-10 print:bg-white print:py-0">
+    <div className="min-h-dvh bg-[#26251f] py-10 print:bg-white print:py-0">
       <style>{`
         @page { size: A4; margin: 0; }
-        @media print { html, body { background: #070910 !important; } .mk-page { break-after: page; box-shadow: none !important; margin: 0 !important; } }
+        @media print { html, body { background: #0E0E0D !important; } .mk-page { break-after: page; box-shadow: none !important; margin: 0 !important; } }
         .mk-page, .mk-page * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       `}</style>
 
@@ -83,7 +83,7 @@ export default function MediaKitPage() {
           {players.map((p) => {
             const top = getHighlights(p.id)[0];
             return (
-              <div key={p.id} className="border-t-2 pt-3" style={{ borderColor: p.accent === "cyan" ? "#56D7FF" : "#FD4B9D" }}>
+              <div key={p.id} className="border-t-2 pt-3" style={{ borderColor: `var(--color-${p.accent})` }}>
                 <p className="font-display text-[20pt] uppercase leading-none">{p.handle}</p>
                 <p className="mt-1 text-[8pt] text-muted">{t("eliteHome.player")}</p>
                 <p className="mt-2 text-[8.5pt] leading-snug text-snow/85">{p.games.slice(0, 4).join(" · ")}</p>
@@ -126,13 +126,13 @@ export default function MediaKitPage() {
                 </span>
                 <span>
                   <span className="block text-[9.5pt] font-semibold">{r.game}</span>
-                  <span className="block text-[8pt] text-muted">{r.event} · <span style={{ color: k ? "#56D7FF" : "#FD4B9D" }}>{k ? "Kazukun" : "BlueKen"}</span></span>
+                  <span className="block text-[8pt] text-muted">{r.event} · <span style={{ color: k ? "var(--color-magenta)" : "var(--color-cyan)" }}>{k ? "Kazukun" : "BlueKen"}</span></span>
                   <span className="mt-1.5 block h-[2.2mm] bg-white/10">
-                    <span className="block h-full" style={{ width: `${pct}%`, background: k ? "#56D7FF" : "#FD4B9D" }} />
+                    <span className="block h-full" style={{ width: `${pct}%`, background: k ? "var(--color-magenta)" : "var(--color-cyan)" }} />
                   </span>
                 </span>
                 <span className="text-right">
-                  <span className="block font-display text-[13pt] uppercase" style={{ color: k ? "#56D7FF" : "#FD4B9D" }}>Top {formatTopPercent(r.placement, r.entrants)}</span>
+                  <span className="block font-display text-[13pt] uppercase" style={{ color: k ? "var(--color-magenta)" : "var(--color-cyan)" }}>Top {formatTopPercent(r.placement, r.entrants)}</span>
                   <span className="block text-[7.5pt] text-muted">{Math.floor(pct)}%</span>
                 </span>
               </li>

@@ -4,11 +4,11 @@ export function Eyebrow({ children, className }: { children: React.ReactNode; cl
   return (
     <p
       className={cn(
-        "flex items-center gap-3 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-cyan",
+        "inline-flex -rotate-1 items-center gap-2 bg-snow px-2.5 py-1 font-heading text-[11px] font-bold uppercase tracking-widest text-ink",
         className,
       )}
     >
-      <span aria-hidden className="h-px w-8 bg-current" />
+      <span aria-hidden className="size-1.5 bg-magenta" />
       {children}
     </p>
   );
@@ -34,13 +34,15 @@ export function SectionHeading({
       {eyebrow && <Eyebrow className={cn(align === "center" && "justify-center")}>{eyebrow}</Eyebrow>}
       <Tag
         className={cn(
-          "mt-4 text-balance font-display uppercase leading-[0.95] tracking-tight text-snow",
-          Tag === "h1" ? "text-[2.5rem] sm:text-6xl lg:text-7xl" : "text-[2rem] sm:text-5xl",
+          "mt-5 text-balance font-display uppercase tracking-[-0.01em] text-snow",
+          // Font size before leading: tailwind-merge drops a leading-* that precedes a text-* size.
+          Tag === "h1" ? "text-[clamp(2.1rem,8vw,5.5rem)]" : "text-[clamp(1.8rem,5.5vw,3.5rem)]",
+          "leading-[1]",
         )}
       >
         {title}
       </Tag>
-      {body && <p className="mt-5 text-pretty text-lg leading-relaxed text-muted">{body}</p>}
+      {body && <p className="mt-5 text-pretty text-base leading-relaxed text-muted">{body}</p>}
     </div>
   );
 }

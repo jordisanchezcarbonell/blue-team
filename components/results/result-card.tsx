@@ -13,7 +13,7 @@ export function PlacementBar({ result, className }: { result: Result; className?
       <div
         className={cn(
           "h-full",
-          result.player === "kazukun" ? "bg-cyan" : "bg-magenta",
+          result.player === "kazukun" ? "bg-magenta" : "bg-cyan",
         )}
         style={{ width: `${pct}%` }}
       />
@@ -24,10 +24,10 @@ export function PlacementBar({ result, className }: { result: Result; className?
 export function ResultCard({ result, showPlayer = true }: { result: Result; showPlayer?: boolean }) {
   const t = useTranslations("common");
   const locale = useLocale();
-  const accent = result.player === "kazukun" ? "text-cyan" : "text-magenta";
+  const accent = result.player === "kazukun" ? "text-magenta" : "text-cyan";
 
   return (
-    <article className="clip-corner group relative flex h-full flex-col bg-surface p-5 ring-1 ring-inset ring-line transition-colors hover:bg-surface-2">
+    <article className="group relative flex h-full flex-col bg-surface p-5 ring-1 ring-inset ring-line transition-colors hover:bg-surface-2">
       <header className="flex flex-wrap items-center gap-2">
         <span className="font-heading text-xs font-semibold text-muted">{result.year}</span>
         <Badge tone={result.series.startsWith("evo") ? "cyan" : "muted"}>{t(`series.${result.series}`)}</Badge>

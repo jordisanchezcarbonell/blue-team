@@ -78,7 +78,8 @@ Código en `app/[locale]/designs/` y `components/designs/`. Las rutas llevan `no
 
 ## Diseño principal y navegación de estilos
 
-La home usa **A · Esports Elite** (`components/elite/`) con números grandes y manifiesto (de B) y barras de resultados (de C). Las propuestas siguen en `/designs`.
+La web usa **C · FGC Underground** como diseño principal: paleta asfalto/papel/ácido/rojo y tipografías Dela Gothic One + JetBrains Mono (tokens en `app/globals.css`, fuentes en `app/[locale]/layout.tsx`). La home está en `components/underground/` e incluye además el resumen «En 30 segundos», los canales, la sección EVO, la temporada 2027 y el media kit. Las páginas internas heredan el tema a través de los tokens.
+La home anterior (A · Esports Elite) sigue en `components/elite/`, y todas las propuestas siguen en `/designs`. La A conserva su paleta original mediante la clase `.theme-elite`.
 La barra flotante inferior permite moverse entre la web principal, A, B, C, D y el comparador. **Desactívala antes de enviar la web a marcas** con `NEXT_PUBLIC_STYLE_NAV=false`.
 
 ### Criterio de las barras de resultados

@@ -74,7 +74,7 @@ export default function ResultsPage() {
                   <span className="truncate text-snow/90">{g.game}</span>
                   <span className="font-heading text-xs font-bold text-muted">{g.count}</span>
                   <span aria-hidden className="col-span-2 h-1 bg-line">
-                    <span className="block h-full bg-gradient-to-r from-cyan to-magenta" style={{ width: `${(g.count / maxGame) * 100}%` }} />
+                    <span className="block h-full bg-cyan" style={{ width: `${(g.count / maxGame) * 100}%` }} />
                   </span>
                 </li>
               ))}

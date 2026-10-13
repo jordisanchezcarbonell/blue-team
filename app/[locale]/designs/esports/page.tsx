@@ -1,6 +1,6 @@
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import type { Metadata } from "next";
-import { Saira_Condensed } from "next/font/google";
+import { Inter, Saira_Condensed, Space_Grotesk } from "next/font/google";
 import { useLocale, useTranslations } from "next-intl";
 import { getDesignCopy } from "@/components/designs/copy";
 import { getDesignData } from "@/components/designs/data";
@@ -10,6 +10,8 @@ import { formatTopPercent, topPercent } from "@/lib/results/stats";
 import type { Result } from "@/lib/results/types";
 import { cn } from "@/lib/utils";
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
 const saira = Saira_Condensed({
   weight: ["500", "700", "800", "900"],
   subsets: ["latin", "latin-ext"],
@@ -30,7 +32,7 @@ export default function EsportsDesign() {
   const best = stats.best!;
 
   return (
-    <div className={cn(saira.variable, "min-h-dvh bg-[#05070d] text-snow antialiased")}>
+    <div className={cn(saira.variable, inter.variable, spaceGrotesk.variable, "theme-elite min-h-dvh bg-[#05070d] text-snow antialiased")}>
       {/* Ticker */}
       <div className="overflow-hidden border-b border-white/5 bg-cyan text-ink">
         <div className="flex w-max animate-marquee gap-10 py-1.5" aria-hidden>

@@ -44,10 +44,10 @@ export default function TeamPage() {
         ))}
 
         <section id="creator" aria-labelledby="creator-title" className="scroll-mt-24 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <PhotoPlaceholder label={c("pendingPhoto")} initials="C" accent="snow" className="clip-corner aspect-[4/5]" />
+          <PhotoPlaceholder label={c("pendingPhoto")} initials="C" accent="snow" className="aspect-[4/5]" />
           <div className="self-center">
             <p className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-muted">{c("pending")}</p>
-            <h2 id="creator-title" className="mt-2 font-display text-5xl uppercase text-snow sm:text-6xl">
+            <h2 id="creator-title" className="mt-2 font-display text-[clamp(2.2rem,10vw,3.75rem)] uppercase leading-none text-snow">
               {ti("creator")}
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{t("bios.creator")}</p>
@@ -81,13 +81,13 @@ function PlayerSection({ player, reverse }: { player: PlayerProfile; reverse: bo
           label={c("pendingPhoto")}
           initials={player.handle.slice(0, 2).toUpperCase()}
           accent={player.accent}
-          className={cn("clip-corner aspect-[4/5]", reverse && "lg:order-2")}
+          className={cn("aspect-[4/5]", reverse && "lg:order-2")}
         />
         <div className="self-center">
           <p className={cn("font-heading text-xs font-semibold uppercase tracking-[0.25em]", accent)}>
             {ti("player")} · Barcelona
           </p>
-          <h2 id={`${player.id}-title`} className="mt-2 font-display text-6xl uppercase text-snow sm:text-7xl">
+          <h2 id={`${player.id}-title`} className="mt-2 font-display text-[clamp(2.4rem,11vw,4.5rem)] uppercase leading-none text-snow">
             {player.handle}
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{t(`bios.${player.id}`)}</p>

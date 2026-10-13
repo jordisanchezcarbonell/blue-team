@@ -25,12 +25,12 @@ export function Packages({ headingLevel = "h2" }: { headingLevel?: "h2" | "h1" }
               <li
                 key={tier}
                 className={cn(
-                  "clip-corner relative flex flex-col p-7 ring-1 ring-inset sm:p-8",
-                  featured ? "bg-gradient-to-b from-surface-2 to-surface ring-cyan/50" : "bg-surface ring-line",
+                  "relative flex flex-col p-7 ring-1 ring-inset sm:p-8",
+                  featured ? "bg-surface-2 ring-2 ring-cyan" : "bg-surface ring-line",
                 )}
               >
                 {featured && (
-                  <div aria-hidden className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-cyan to-magenta" />
+                  <div aria-hidden className="absolute inset-x-0 top-0 h-1 bg-cyan" />
                 )}
                 <div className="flex items-center justify-between gap-3">
                   <span className="font-heading text-xs font-bold text-muted">0{i + 1}</span>

@@ -595,5 +595,26 @@
     "tiersTitle": "Sponsorship packages",
     "ctaTitle": "Sponsor our journey",
     "player": "Player · Barcelona"
+  },
+  "ugHome": {
+    "select": "Select your player",
+    "creator": "Creator",
+    "creatorRole": "Camera · Edit · Socials",
+    "games": "Games",
+    "best": "Best results",
+    "profile": "View profile",
+    "healthTitle": "Health bars",
+    "healthLead": "Final placement in each Evo bracket. Full bar = top of the bracket. Every tournament on its own.",
+    "stageSelect": "Stage select",
+    "stage": "Stage",
+    "nextStage": "Next stage",
+    "round": "Round",
+    "replayTitle": "Replays & content",
+    "portfolioPending": "Portfolio pending",
+    "tiersTitle": "Choose your level",
+    "level": "Level",
+    "continue": "Continue?",
+    "pressStart": "Partner up",
+    "channels": "Channels"
   }
 }
