@@ -60,7 +60,7 @@ data/results.json        Resultados competitivos (fuente local tipada)
 data/team.ts             Perfiles (fotos = null hasta tener fotos reales)
 data/evo.ts              Datos editoriales de EVO, cada uno con su fuente
 data/journey.ts          Años de la cronología
-data/content.ts          Portfolio publicado (vacío a propósito)
+data/content.ts          Portfolio publicado: 15 vlogs de EVO del canal de BlueKen (catalán)
 lib/results/             Tipos, repositorio, filtros y estadísticas
 components/              UI, secciones de home, resultados, contacto…
 ```
@@ -147,7 +147,7 @@ Copia las imágenes a `public/team/` y rellena `photo` en `data/team.ts`. Despu�
 
 ### Portfolio
 
-Añade piezas reales a `contentItems` en `data/content.ts`. YouTube se incrusta con `youtube-nocookie`; TikTok e Instagram enlazan fuera (sus scripts de embed añaden tracking de terceros).
+Añade piezas reales a `contentItems` en `data/content.ts`. Cada pieza lleva `event` y `year`: se agrupa en /content y se enlaza desde /journey. YouTube muestra la miniatura y carga `youtube-nocookie` solo al pulsar; TikTok e Instagram enlazan fuera (sus scripts de embed añaden tracking de terceros).
 
 ### Redes del equipo
 

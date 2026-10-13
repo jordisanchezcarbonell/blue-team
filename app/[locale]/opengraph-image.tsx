@@ -21,7 +21,7 @@ export default async function Image() {
           padding: 72,
           background: "#0E0E0D",
           backgroundImage:
-            "radial-gradient(circle at 85% 10%, rgba(253,75,157,0.35), transparent 45%), radial-gradient(circle at 10% 90%, rgba(86,215,255,0.28), transparent 45%)",
+            "radial-gradient(circle at 85% 10%, rgba(255,51,85,0.32), transparent 45%), radial-gradient(circle at 10% 90%, rgba(215,255,60,0.18), transparent 45%)",
           color: "#EFEAE0",
           fontFamily: "sans-serif",
         }}

@@ -124,8 +124,8 @@ export const proposals: BrandProposal[] = [
         en: "Fighting game players care about competition gear: controllers, arcade sticks and audio.",
       },
       {
-        es: "Contenido en español y en inglés para la comunidad europea.",
-        en: "Content in Spanish and English for the European community.",
+        es: "Ya documentamos cada EVO en vídeo: vlogs de EVO 2022, EVO 2023 y EVO France 2025 en el canal de BlueKen.",
+        en: "We already document every Evo on video: vlogs from Evo 2022, Evo 2023 and Evo France 2025 on BlueKen's channel.",
       },
     ],
     ideas: [

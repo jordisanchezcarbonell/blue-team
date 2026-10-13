@@ -350,12 +350,24 @@
   },
   "contentPage": {
     "eyebrow": "Contenido",
-    "title": "Portfolio en construcción.",
-    "lead": "Aquí publicaremos vídeos, fotografías y publicaciones reales del equipo. Mientras tanto, estos son los formatos que producimos para cada evento.",
+    "title": "Cada viaje, grabado.",
+    "lead": "Vlogs de EVO 2022, EVO 2023 y EVO France 2025, publicados en el canal de YouTube de BlueKen. Así contamos hoy cada evento, sin patrocinador. Con un partner, este es el formato en el que aparece su marca.",
     "empty": "Todavía no hay piezas publicadas en esta web.",
     "emptyBody": "Preferimos dejar esta sección vacía antes que mostrar contenido que no sea nuestro.",
     "platforms": "Plataformas preparadas",
-    "ask": "¿Quieres ver material antes de que se publique? Pídenoslo."
+    "ask": "¿Quieres ver material antes de que se publique? Pídenoslo.",
+    "channelBy": "Canal de BlueKen",
+    "channelNote": "Vídeos en catalán. Los títulos se muestran tal y como se publicaron.",
+    "channel": "Ver canal",
+    "playlist": "Lista completa",
+    "play": "Reproducir",
+    "pieces": "{count, plural, one {# vídeo} other {# vídeos}}",
+    "lang": {
+      "ca": "Català",
+      "es": "Español",
+      "en": "English"
+    },
+    "journeyVlogs": "Vlogs de este año"
   },
   "partnersPage": {
     "eyebrow": "Partners",
@@ -616,7 +628,8 @@
     "level": "Nivel",
     "continue": "¿Continuar?",
     "pressStart": "Partner up",
-    "channels": "Canales"
+    "channels": "Canales",
+    "allVlogs": "Ver los {count} vlogs"
   },
   "emailActions": {
     "copy": "Copiar email",

@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
     agentFeedback: true,
   },
   cacheComponents: true,
+  images: {
+    // YouTube thumbnails for the content portfolio.
+    remotePatterns: [new URL("https://i.ytimg.com/vi/**")],
+  },
   partialPrefetching: true,
   turbopack: {
     rules: {

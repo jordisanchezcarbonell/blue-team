@@ -23,6 +23,14 @@ export function localizedUrl(locale: Locale, page: PageKey) {
   return absoluteUrl(`/${locale}${pagePaths[page]}`);
 }
 
+/**
+ * The generated OG card (app/[locale]/opengraph-image.tsx). Listed explicitly because a
+ * page that sets `openGraph` replaces the file-based image inherited from the layout.
+ */
+export function ogImage(locale: Locale) {
+  return { url: absoluteUrl(`/${locale}/opengraph-image`), width: 1200, height: 630, alt: `${siteConfig.name} — ${siteConfig.claim}` };
+}
+
 export async function buildMetadata(locale: Locale, page: PageKey): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta" });
   const title = page === "home" ? `${siteConfig.name} — ${t("home")}` : t(page);
@@ -47,8 +55,9 @@ export async function buildMetadata(locale: Locale, page: PageKey): Promise<Meta
       description,
       siteName: siteConfig.name,
       locale: locale === "es" ? "es_ES" : "en_US",
+      images: [ogImage(locale)],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage(locale).url] },
   };
 }
 

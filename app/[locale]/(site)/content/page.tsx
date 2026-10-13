@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { ContentEmbed } from "@/components/content/content-embed";
@@ -8,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { PendingState } from "@/components/ui/pending-state";
-import { contentItems } from "@/data/content";
+import { contentByEvent, contentChannel, contentItems } from "@/data/content";
 import type { Locale } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
 
@@ -27,11 +28,37 @@ export default function ContentPage() {
       <PageHero eyebrow={t("eyebrow")} title={t("title")} lead={t("lead")} />
       <Container className="space-y-20">
         {contentItems.length > 0 ? (
-          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {contentItems.map((item) => (
-              <li key={item.id}><ContentEmbed item={item} /></li>
+          <div className="space-y-16">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-2 border-line p-4 sm:p-5">
+              <p className="text-sm text-snow">
+                <span className="font-bold uppercase tracking-widest text-cyan">{t("channelBy")}</span> · {contentChannel.name}
+                <span className="mt-1 block text-xs text-muted">{t("channelNote")}</span>
+              </p>
+              <div className="flex flex-wrap gap-x-5 gap-y-2 sm:ml-auto">
+                {[
+                  { href: contentChannel.url, label: t("channel") },
+                  { href: contentChannel.playlist, label: t("playlist") },
+                ].map((l) => (
+                  <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-snow hover:text-cyan">
+                    {l.label} <ExternalLink aria-hidden className="size-3.5" />
+                  </a>
+                ))}
+              </div>
+            </div>
+            {contentByEvent().map((group) => (
+              <section key={group.event} id={`event-${group.year}`} aria-labelledby={`event-${group.year}-title`} className="scroll-mt-28">
+                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 border-b-2 border-snow pb-3">
+                  <h2 id={`event-${group.year}-title`} className="font-display text-3xl uppercase text-snow sm:text-4xl">{group.event}</h2>
+                  <span className="text-xs uppercase tracking-widest text-muted">{t("pieces", { count: group.items.length })}</span>
+                </div>
+                <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {group.items.map((item) => (
+                    <li key={item.id}><ContentEmbed item={item} /></li>
+                  ))}
+                </ul>
+              </section>
             ))}
-          </ul>
+          </div>
         ) : (
           <PendingState title={t("empty")} body={t("emptyBody")} className="py-16">
             <div className="mt-2 flex flex-wrap justify-center gap-2">

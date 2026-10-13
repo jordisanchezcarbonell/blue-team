@@ -3,6 +3,7 @@ import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { TrackedAnchor } from "@/components/analytics/tracked-anchor";
 import { PhotoSlot, VideoSlot } from "@/components/elite/media-slot";
 import { siteConfig } from "@/config/site";
+import { contentItems } from "@/data/content";
 import { journeyYears } from "@/data/journey";
 import { media } from "@/data/media";
 import { nextChallenge, type ExpenseKey } from "@/data/next-challenge";
@@ -371,6 +372,11 @@ export function UgContent() {
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            {contentItems.length > 0 && (
+              <Link href="/content" className="text-xs font-bold uppercase tracking-widest text-cyan hover:text-snow">
+                {t("ugHome.allVlogs", { count: contentItems.length })} →
+              </Link>
+            )}
             {youtube && (
               <a href={youtube.url} target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-widest text-snow hover:text-cyan">
                 YouTube · {youtube.handle} ↗

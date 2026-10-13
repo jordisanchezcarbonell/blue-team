@@ -350,12 +350,24 @@
   },
   "contentPage": {
     "eyebrow": "Content",
-    "title": "Portfolio under construction.",
-    "lead": "This is where we'll publish the team's real videos, photos and posts. Meanwhile, these are the formats we produce at every event.",
+    "title": "Every trip, on camera.",
+    "lead": "Vlogs from Evo 2022, Evo 2023 and Evo France 2025, published on BlueKen's YouTube channel. This is how we cover every event today, with no sponsor. With a partner, this is the format where their brand appears.",
     "empty": "No pieces published on this site yet.",
     "emptyBody": "We'd rather leave this section empty than show content that isn't ours.",
     "platforms": "Platforms ready",
-    "ask": "Want to see material before it's published? Just ask."
+    "ask": "Want to see material before it's published? Just ask.",
+    "channelBy": "BlueKen's channel",
+    "channelNote": "Videos in Catalan. Titles are shown as published.",
+    "channel": "Visit channel",
+    "playlist": "Full playlist",
+    "play": "Play",
+    "pieces": "{count, plural, one {# video} other {# videos}}",
+    "lang": {
+      "ca": "Català",
+      "es": "Español",
+      "en": "English"
+    },
+    "journeyVlogs": "Vlogs from this year"
   },
   "partnersPage": {
     "eyebrow": "Partners",
@@ -616,7 +628,8 @@
     "level": "Level",
     "continue": "Continue?",
     "pressStart": "Partner up",
-    "channels": "Channels"
+    "channels": "Channels",
+    "allVlogs": "Watch all {count} vlogs"
   },
   "emailActions": {
     "copy": "Copy email",

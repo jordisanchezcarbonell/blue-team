@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Play } from "lucide-react";
 import type { Photo, Video } from "@/data/media";
 import { cn } from "@/lib/utils";
+import { YouTubeLite } from "@/components/content/youtube-lite";
 
 type Accent = "cyan" | "magenta" | "snow";
 
@@ -61,16 +62,7 @@ export function PhotoSlot({
 /** Showreel: lazy YouTube (nocookie) when configured, otherwise a designed placeholder. */
 export function VideoSlot({ video, locale, soonLabel, className }: { video: Video | null; locale: "es" | "en"; soonLabel: string; className?: string }) {
   if (video) {
-    return (
-      <iframe
-        src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
-        title={video.title[locale]}
-        loading="lazy"
-        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className={cn("aspect-video w-full bg-black", className)}
-      />
-    );
+    return <YouTubeLite id={video.youtubeId} title={video.title[locale]} playLabel={locale === "es" ? "Reproducir" : "Play"} sizes="(min-width: 1024px) 58vw, 100vw" className={className} />;
   }
   return (
     <div className={cn("relative isolate grid aspect-video w-full place-items-center overflow-hidden bg-surface ring-2 ring-inset ring-line", className)}>

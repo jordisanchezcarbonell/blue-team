@@ -11,6 +11,8 @@ export interface PlayerProfile {
   /** Path under /public. `null` until a real photo is provided — never use stock or AI images. */
   photo: string | null;
   accent: "cyan" | "magenta";
+  /** Own YouTube channel, if any. */
+  youtube?: { name: string; url: string };
 }
 
 export interface CreatorProfile {
@@ -69,6 +71,7 @@ export const players: PlayerProfile[] = [
     ],
     photo: null,
     accent: "cyan",
+    youtube: { name: "El Moviment Ondulatori", url: "https://www.youtube.com/@ElMovimentOndulatori" },
   },
 ];
 

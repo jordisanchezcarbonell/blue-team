@@ -14,7 +14,8 @@ Lista de lo que falta para tener la versión definitiva. La web funciona sin ell
 - [x] YouTube (@ElMovimentOndulatori) y Twitch (elmovimentondulatori) añadidos.
 - [ ] **Seguidores de Twitch** (panel de creador) y, si existen, Instagram/TikTok → `data/social.ts`.
 - [ ] **Presupuesto 2027** por concepto → `data/next-challenge.ts`.
-- [ ] **Showreel** (ID de vídeo de YouTube) y fotos → `data/media.ts`.
+- [ ] **Showreel** propio y fotos → `data/media.ts` (ahora la home muestra el vlog del día 1 de EVO France 2025).
+- [ ] **Vlogs de EVO France 2026** → añadirlos a `data/content.ts` cuando se publiquen.
 - [ ] Regenerar el media kit (`npm run media-kit`) tras configurar el email.
 - [ ] **Métricas propias reales** (seguidores, visualizaciones medias) para la propuesta comercial. La web no muestra ninguna hasta tenerlas.
 - [ ] **Dominio** (ahora: https://blue-team-five.vercel.app) y `NEXT_PUBLIC_SITE_URL`.

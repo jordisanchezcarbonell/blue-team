@@ -1,3 +1,4 @@
+import { Play } from "lucide-react";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { PageHero } from "@/components/layout/page-hero";
@@ -6,7 +7,9 @@ import { ResultRow } from "@/components/results/result-row";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { contentForYear } from "@/data/content";
 import { journeyYears } from "@/data/journey";
+import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { getResults } from "@/lib/results/repository";
 import { buildMetadata } from "@/lib/seo";
@@ -22,6 +25,7 @@ export default function JourneyPage() {
   const tl = useTranslations("timeline");
   const c = useTranslations("common");
   const nav = useTranslations("nav");
+  const ct = useTranslations("contentPage");
 
   return (
     <>
@@ -52,6 +56,7 @@ export default function JourneyPage() {
           <div aria-hidden className="absolute bottom-0 left-[7px] top-2 w-0.5 bg-line md:left-[calc(9rem+7px)]" />
           {journeyYears.map(({ year, status }) => {
             const results = getResults({ year, sort: "best" });
+            const vlogs = contentForYear(year);
             return (
               <li key={year} id={`y${year}`} className="relative scroll-mt-32 pb-16 pl-10 md:grid md:grid-cols-[9rem_1fr] md:gap-10 md:pl-0">
                 <span
@@ -79,6 +84,15 @@ export default function JourneyPage() {
                         {results.map((r) => <ResultRow key={r.id} result={r} />)}
                       </ul>
                     </div>
+                  )}
+                  {vlogs.length > 0 && (
+                    <Link
+                      href={`/content#event-${year}`}
+                      className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-snow hover:text-cyan"
+                    >
+                      <span className="grid size-6 place-items-center bg-cyan text-ink"><Play aria-hidden className="size-3 translate-x-px fill-current" /></span>
+                      {ct("journeyVlogs")} · {ct("pieces", { count: vlogs.length })} →
+                    </Link>
                   )}
                 </Reveal>
               </li>

@@ -116,6 +116,16 @@ function PlayerSection({ player, reverse }: { player: PlayerProfile; reverse: bo
             >
               {c("startggProfile")} <ExternalLink aria-hidden className="size-3.5" />
             </a>
+            {player.youtube && (
+              <a
+                href={player.youtube.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-heading text-sm font-semibold text-snow underline-offset-4 hover:text-cyan hover:underline"
+              >
+                YouTube · {player.youtube.name} <ExternalLink aria-hidden className="size-3.5" />
+              </a>
+            )}
             <span className="text-sm text-muted">
               {t("records", { count: siteConfig.documentedRecords[player.id] })}
             </span>

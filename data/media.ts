@@ -24,6 +24,10 @@ export const media: {
 } = {
   players: { kazukun: null, blueken: null, creator: null },
   hero: null,
-  showreel: null,
+  // Latest vlog from BlueKen's channel (in Catalan). Replace with a real showreel when there is one.
+  showreel: {
+    youtubeId: "UJiUW4MYCdE",
+    title: { es: "EVO France 2025 · Vlog del primer día (en catalán)", en: "Evo France 2025 · Day 1 vlog (in Catalan)" },
+  },
   gallery: [],
 };
