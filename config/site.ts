@@ -18,7 +18,7 @@ export const siteConfig = {
   recordsUntil: 2026,
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   /** Commercial contact. Empty until configured via env (see .env.example). */
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "jordigw@gmail.com",
   /** Team social profiles. Add them here once they exist; empty = hidden. */
   social: {
     instagram: "",

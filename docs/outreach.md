@@ -6,7 +6,7 @@ Marcas preparadas: `pccomponentes`, `razer`, `hori` (añade más en `data/propos
 
 ## Antes de enviar nada
 
-- [ ] `NEXT_PUBLIC_CONTACT_EMAIL` configurado y media kit regenerado (`npm run media-kit`).
+- [x] Email de contacto (`jordigw@gmail.com`) y media kit regenerado.
 - [ ] `NEXT_PUBLIC_STYLE_NAV=false` en producción.
 - [ ] Al menos una foto real del equipo (idealmente de EVO France 2026).
 - [ ] `NEXT_PUBLIC_ANALYTICS=true` + Analytics activado en Vercel, para ver si abren su propuesta.

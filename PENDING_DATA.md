@@ -4,7 +4,7 @@ Lista de lo que falta para tener la versión definitiva. La web funciona sin ell
 
 ## Prioridad alta (afecta a la conversión)
 
-- [ ] **Email comercial** → `NEXT_PUBLIC_CONTACT_EMAIL`. Sin él, el formulario no puede abrir el correo.
+- [x] **Email comercial** → `jordigw@gmail.com` (valor por defecto en `lib/env.ts`; `NEXT_PUBLIC_CONTACT_EMAIL` lo sobrescribe).
 - [ ] **Fotos reales** de Kazukun, BlueKen y Gise (retrato vertical 4:5, mínimo 1200 px de alto). Idealmente también fotos en EVO.
 - [x] Alias de la creadora: **Gise**.
 - [ ] **Gise**: bio propia, redes y 3–6 piezas de portfolio.

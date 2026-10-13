@@ -4,7 +4,7 @@
  */
 export const env = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "",
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "jordigw@gmail.com",
   /** Floating style navigation (main site ↔ design proposals). Set "false" before sending to brands. */
   showStyleNav: process.env.NEXT_PUBLIC_STYLE_NAV !== "false",
   /** Optional scheduling link (Calendly, Cal.com, Google Calendar…) for a 15-minute intro call. */

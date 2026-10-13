@@ -37,7 +37,7 @@ npm run build && npm start
 | Variable | Obligatoria | Uso |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | En producción | URL pública (sin `/` final). Canonical, Open Graph, `sitemap.xml`, `robots.txt`. Por defecto `http://localhost:3000`. |
-| `NEXT_PUBLIC_CONTACT_EMAIL` | Recomendada | Email comercial. El formulario abre el cliente de correo (`mailto:`) dirigido a esta dirección. Vacía → la web muestra un estado explícito "no configurado". |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Recomendada | Email comercial. El formulario abre el cliente de correo (`mailto:`) dirigido a esta dirección. Vacía → se usa `jordigw@gmail.com` (`lib/env.ts`). |
 | `NEXT_PUBLIC_BOOKING_URL` | Opcional | Enlace para agendar una llamada de 15 minutos (Calendly, Cal.com…). Aparece en `/contact` y en las propuestas por marca. |
 | `NEXT_PUBLIC_ANALYTICS` | Opcional | `true` activa Vercel Web Analytics (sin cookies). Actívalo también en el proyecto de Vercel. Registra visitas por página y eventos de conversión (copiar email, abrir correo, descargar media kit, agendar llamada). |
 | `NEXT_PUBLIC_STYLE_NAV` | Opcional | `false` oculta la barra flotante de estilos (hazlo antes de enviar la web a marcas). |
@@ -103,8 +103,8 @@ npm run build && npm start          # en otra terminal
 npm run media-kit                   # usa Chrome headless; MEDIA_KIT_BASE_URL=http://localhost:3000 por defecto
 ```
 
-### Activar el formulario de contacto
-Falta **`NEXT_PUBLIC_CONTACT_EMAIL`**. Añádelo en `.env.local` (o en Vercel → Environment Variables), vuelve a construir y regenera el media kit. En desarrollo, `/contact` muestra un aviso con lo que falta.
+### Cambiar el email de contacto
+Por defecto es `jordigw@gmail.com`. Para usar otro, define **`NEXT_PUBLIC_CONTACT_EMAIL`** en `.env.local` (o en Vercel → Environment Variables), vuelve a construir y regenera el media kit.
 
 ## Cómo actualizar contenido
 
