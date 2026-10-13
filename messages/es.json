@@ -1,0 +1,599 @@
+{
+  "meta": {
+    "description": "Dos hermanos de Barcelona que compiten en juegos de lucha desde 2018 y una creadora de contenido. EVO Las Vegas, EVO France y una trayectoria documentada en start.gg. Proyecto abierto a patrocinadores.",
+    "home": "Jugadores de Fighting Games de Barcelona en EVO",
+    "team": "Equipo",
+    "teamDescription": "Kazukun y BlueKen, jugadores competitivos de juegos de lucha, y la creadora de contenido que documenta el viaje.",
+    "journey": "Trayectoria 2018–2026",
+    "journeyDescription": "Cronología competitiva desde los torneos locales de Barcelona hasta EVO Las Vegas y EVO France.",
+    "results": "Resultados competitivos",
+    "resultsDescription": "Historial de resultados en start.gg con filtros por jugador, año, juego y competición.",
+    "content": "Contenido",
+    "contentDescription": "Producción audiovisual desde dentro de la Fighting Game Community: vídeo vertical, vlogs, entrevistas y fotografía.",
+    "partners": "Patrocinio",
+    "partnersDescription": "Patrocina nuestro camino a EVO: modalidades Supporter, Event Partner y Main Partner.",
+    "contact": "Contacto comercial",
+    "contactDescription": "Hablemos de una colaboración con tu marca."
+  },
+  "nav": {
+    "home": "Inicio",
+    "team": "Equipo",
+    "journey": "Trayectoria",
+    "results": "Resultados",
+    "content": "Contenido",
+    "partners": "Patrocinio",
+    "contact": "Contacto",
+    "cta": "Become a Partner",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma",
+    "switchTo": "Switch to English",
+    "skip": "Saltar al contenido",
+    "main": "Navegación principal"
+  },
+  "footer": {
+    "tagline": "Jugadores independientes de Fighting Games. Barcelona.",
+    "disclaimer": "Somos jugadores independientes que participan en competiciones de EVO. No somos organizadores de EVO ni tenemos relación oficial con Evolution Championship Series. Todas las marcas mencionadas pertenecen a sus respectivos propietarios.",
+    "sources": "Resultados verificables en start.gg",
+    "explore": "Explorar",
+    "work": "Colaborar",
+    "brandNote": "Nombre e identidad provisionales."
+  },
+  "common": {
+    "pending": "Pendiente",
+    "pendingPhoto": "Foto real pendiente",
+    "viewOnStartgg": "Ver en start.gg",
+    "startggProfile": "Perfil start.gg",
+    "selection": "Selección",
+    "top": "Top {pct}",
+    "entrants": "{count, plural, one {# participante} other {# participantes}}",
+    "placement": "Posición",
+    "needsReview": "Nombre por verificar",
+    "proposal": "Propuesta",
+    "realData": "Dato verificable",
+    "players": {
+      "kazukun": "Kazukun",
+      "blueken": "BlueKen"
+    },
+    "series": {
+      "evo-las-vegas": "EVO Las Vegas",
+      "evo-france": "EVO France",
+      "evo-online": "EVO Online",
+      "hfsplay": "HFSPlay",
+      "other": "Otros torneos"
+    },
+    "format": {
+      "singles": "Individual",
+      "teams": "Equipos"
+    },
+    "teamsNote": "Competición por equipos",
+    "online": "Online",
+    "seeAll": "Ver todo",
+    "readMore": "Saber más"
+  },
+  "hero": {
+    "eyebrow": "Barcelona · Fighting Game Community · Desde 2018",
+    "subtitle": "Dos hermanos. Una creadora de contenido. Años compitiendo y llevando nuestra pasión por los juegos de lucha a escenarios internacionales.",
+    "ctaPartner": "Become a Partner",
+    "ctaJourney": "Explore Our Journey",
+    "routeLabel": "Ruta competitiva documentada",
+    "scroll": "Desliza"
+  },
+  "teamIntro": {
+    "eyebrow": "El equipo",
+    "title": "Dos jugadores. Una creadora. Un mismo viaje.",
+    "body": "Somos un equipo independiente: dos hermanos que compiten en juegos de lucha y una creadora que lo documenta todo. No vendemos un logo en una camiseta: ofrecemos una historia real, construida torneo a torneo.",
+    "player": "Jugador",
+    "creator": "Creadora de contenido",
+    "profile": "Ver perfil"
+  },
+  "stats": {
+    "eyebrow": "Trayectoria en cifras",
+    "title": "Datos, no promesas.",
+    "note": "Cifras calculadas a partir de los registros públicos de start.gg. Los participantes de cada torneo no se suman entre sí.",
+    "since": "Compitiendo desde",
+    "records": "Registros de resultados en start.gg",
+    "recordsDetail": "Kazukun {k} · BlueKen {b}",
+    "editions": "Ediciones de EVO disputadas",
+    "editionsDetail": "Las Vegas · France · Online",
+    "games": "Juegos de lucha en competición",
+    "gamesDetail": "En la selección publicada",
+    "best": "Mejor posición relativa",
+    "bestDetail": "{placement}/{entrants} · {game}"
+  },
+  "highlights": {
+    "eyebrow": "Resultados destacados",
+    "title": "En brackets de cientos y miles de jugadores.",
+    "body": "Cada resultado enlaza a su fuente en start.gg. “Top X%” indica la posición relativa dentro de ese torneo concreto.",
+    "cta": "Ver historial completo"
+  },
+  "timeline": {
+    "eyebrow": "Cronología",
+    "title": "De los locales de Barcelona a los escenarios de EVO.",
+    "cta": "Ver la trayectoria completa",
+    "noRecords": "Sin registros destacados en la selección actual",
+    "next": "Próxima temporada",
+    "nextBody": "Buscamos marcas que nos acompañen en la próxima temporada competitiva.",
+    "years": {
+      "2018": {
+        "title": "Primeros brackets",
+        "body": "BlueKen empieza a competir: arrancan los registros en start.gg y los torneos locales de Barcelona."
+      },
+      "2021": {
+        "title": "EVO Online",
+        "body": "Primera participación en EVO, en su edición online para Europa."
+      },
+      "2022": {
+        "title": "Primera vez en Las Vegas",
+        "body": "Los dos hermanos compiten en EVO Las Vegas. BlueKen termina 25.º de 411 en Melty Blood: Type Lumina."
+      },
+      "2023": {
+        "title": "El bracket más grande",
+        "body": "EVO Las Vegas con 7.083 participantes en Street Fighter 6. Ambos compiten y BlueKen repite en el Top 18% de Melty Blood."
+      },
+      "2024": {
+        "title": "Temporada de transición",
+        "body": "Registros de este año pendientes de importar en la web."
+      },
+      "2025": {
+        "title": "EVO llega a Europa",
+        "body": "EVO France, HFSPlay y SNTKDD. BlueKen 13.º de 135 en Hunter × Hunter Nen × Impact."
+      },
+      "2026": {
+        "title": "Nuevos títulos, mismo objetivo",
+        "body": "EVO France 2026 en Fatal Fury, Marvel Tōkon y Avatar Legends."
+      }
+    }
+  },
+  "evo": {
+    "eyebrow": "Qué es EVO",
+    "title": "El torneo de juegos de lucha más importante del mundo.",
+    "lead": "Evolution Championship Series (EVO) es el gran punto de encuentro de la Fighting Game Community: un torneo abierto donde cualquier jugador puede inscribirse y medirse con los mejores del mundo en el mismo bracket.",
+    "whyTitle": "Por qué importa competir en EVO",
+    "why": [
+      "Es un torneo abierto: los resultados se ganan partida a partida, no por invitación.",
+      "Reúne a la élite mundial y a miles de jugadores en un mismo fin de semana.",
+      "Es el escaparate donde las editoras presentan novedades y la comunidad se encuentra.",
+      "Competir de forma recurrente demuestra compromiso, nivel y capacidad de viajar y producir contenido in situ."
+    ],
+    "audienceTitle": "Audiencia del evento ≠ audiencia del equipo",
+    "audienceBody": "Las cifras de EVO describen el evento, no nuestra comunidad. Las usamos para dar contexto a la competición, no para prometer alcance. Cualquier métrica de audiencia propia se compartirá con datos reales.",
+    "sourcesTitle": "Fuentes",
+    "disclaimer": "No somos organizadores de EVO ni tenemos relación oficial con Evolution Championship Series."
+  },
+  "production": {
+    "eyebrow": "Producción audiovisual",
+    "title": "Contenido desde dentro del bracket.",
+    "body": "Una creadora dedicada documenta cada viaje: preparación, viaje, competición y comunidad. Contenido nativo para redes, pensado para integrar marcas de forma natural.",
+    "status": "Formatos previstos — portfolio en preparación",
+    "formats": {
+      "vertical": {
+        "title": "Vídeo vertical",
+        "body": "TikTok, Instagram Reels y YouTube Shorts desde el venue."
+      },
+      "vlog": {
+        "title": "Vlogs de viaje",
+        "body": "El camino a cada evento: entrenamiento, viaje y día de torneo."
+      },
+      "photo": {
+        "title": "Fotografía",
+        "body": "Cobertura del evento, el equipo y la comunidad."
+      },
+      "interviews": {
+        "title": "Entrevistas",
+        "body": "Conversaciones con jugadores y comunidad en el propio evento."
+      },
+      "bts": {
+        "title": "Behind the scenes",
+        "body": "Lo que no se ve en el stream: nervios, rutinas y bracket."
+      },
+      "branded": {
+        "title": "Contenido para marcas",
+        "body": "Piezas acordadas con cada partner y entregadas con informe."
+      }
+    }
+  },
+  "benefits": {
+    "eyebrow": "Para tu marca",
+    "title": "Your brand. Our journey.",
+    "body": "Las marcas no financian solo una inscripción. Colaboran con jugadores reales, una trayectoria competitiva documentada y un proyecto capaz de producir contenido desde dentro de la comunidad.",
+    "items": {
+      "authentic": {
+        "title": "Autenticidad",
+        "body": "Jugadores que compiten de verdad en los torneos más importantes del género."
+      },
+      "content": {
+        "title": "Contenido propio",
+        "body": "Una creadora en el equipo: tu marca aparece en piezas producidas in situ."
+      },
+      "community": {
+        "title": "Comunidad FGC",
+        "body": "Presencia en eventos donde se concentra la comunidad de juegos de lucha."
+      },
+      "transparency": {
+        "title": "Transparencia",
+        "body": "Resultados públicos y verificables. Informes después de cada evento."
+      },
+      "local": {
+        "title": "Base en Barcelona",
+        "body": "Un proyecto español con proyección europea e internacional."
+      },
+      "flexible": {
+        "title": "Formatos flexibles",
+        "body": "Desde un apoyo puntual hasta una colaboración de temporada."
+      }
+    }
+  },
+  "packages": {
+    "eyebrow": "Modalidades",
+    "title": "Tres formas de colaborar.",
+    "body": "Contraprestaciones orientativas. Diseñamos cada colaboración con la marca.",
+    "price": "Presupuesto a medida",
+    "cta": "Solicitar propuesta",
+    "featured": "Temporada completa",
+    "tiers": {
+      "supporter": {
+        "name": "Supporter",
+        "tagline": "Colaboración puntual",
+        "items": [
+          "Agradecimiento público",
+          "Mención en redes",
+          "Presencia en la web",
+          "Resumen del evento"
+        ]
+      },
+      "event": {
+        "name": "Event Partner",
+        "tagline": "Patrocinio de una competición",
+        "items": [
+          "Integración de marca",
+          "Contenido audiovisual acordado",
+          "Publicaciones dedicadas",
+          "Presencia en equipación, cuando el evento lo permita",
+          "Informe posterior"
+        ]
+      },
+      "main": {
+        "name": "Main Partner",
+        "tagline": "Colaboración de temporada",
+        "items": [
+          "Visibilidad prioritaria",
+          "Calendario de contenido",
+          "Activaciones personalizadas",
+          "Colaboración continuada",
+          "Informe de resultados"
+        ]
+      }
+    }
+  },
+  "contactCta": {
+    "eyebrow": "Let's collaborate",
+    "title": "Sponsor our journey.",
+    "body": "Cuéntanos qué busca tu marca y te enviaremos una propuesta adaptada.",
+    "cta": "Contactar",
+    "secondary": "Ver modalidades"
+  },
+  "teamPage": {
+    "eyebrow": "Equipo",
+    "title": "Las personas detrás del proyecto.",
+    "lead": "Dos hermanos que compiten en juegos de lucha y una creadora de contenido que documenta el viaje.",
+    "games": "Juegos",
+    "events": "Eventos",
+    "bestResults": "Mejores resultados",
+    "allResults": "Todos sus resultados",
+    "responsibilities": "Responsabilidades",
+    "creatorPending": "Nombre, redes y portfolio pendientes de publicar.",
+    "records": "{count} registros en start.gg",
+    "bios": {
+      "kazukun": "Jugador competitivo de juegos de lucha de Barcelona. Ha competido en EVO Las Vegas y EVO France en títulos como Street Fighter V, Street Fighter 6, Ultra Street Fighter IV, Fatal Fury: City of the Wolves, Marvel Tōkon y Avatar Legends.",
+      "blueken": "Jugador competitivo de juegos de lucha desde 2018. Ha pasado por EVO Online, EVO Las Vegas, EVO France, HFSPlay, Fighting Holidays y los torneos locales de Barcelona, con resultados destacados en Melty Blood: Type Lumina, Hunter × Hunter Nen × Impact y Fatal Fury.",
+      "creator": "Responsable de la producción audiovisual del equipo: documenta cada viaje y produce el contenido para redes y para los partners."
+    },
+    "creatorTasks": [
+      "Vídeos verticales",
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts",
+      "Fotografía",
+      "Vlogs",
+      "Entrevistas",
+      "Behind the scenes",
+      "Contenido para patrocinadores"
+    ],
+    "brothers": "Hermanos"
+  },
+  "journeyPage": {
+    "eyebrow": "Trayectoria",
+    "title": "2018 → 2026",
+    "lead": "Cada hito con su fuente. Los resultados vienen de start.gg; los años sin registros destacados se indican explícitamente.",
+    "resultsIn": "Resultados destacados",
+    "jump": "Ir al año"
+  },
+  "resultsPage": {
+    "eyebrow": "Resultados",
+    "title": "Historial competitivo.",
+    "lead": "Mostramos {shown} de los {total} registros documentados en start.gg. Algunos registros son eventos secundarios o competiciones por equipos, por lo que no equivalen a {total} torneos únicos.",
+    "fullHistory": "Historial completo en start.gg",
+    "filters": "Filtros",
+    "showFilters": "Mostrar filtros",
+    "applyFilters": "Ver {count} resultados",
+    "player": "Jugador",
+    "year": "Año",
+    "game": "Juego",
+    "competition": "Competición",
+    "all": "Todos",
+    "search": "Buscar evento, juego, ciudad…",
+    "searchLabel": "Buscar",
+    "sort": "Ordenar",
+    "sortDateDesc": "Más recientes",
+    "sortDateAsc": "Más antiguos",
+    "sortBest": "Mejor posición relativa",
+    "reset": "Limpiar filtros",
+    "count": "{count, plural, =0 {Sin resultados} one {# resultado} other {# resultados}}",
+    "empty": "Ningún resultado coincide con estos filtros.",
+    "cols": {
+      "year": "Año",
+      "event": "Evento",
+      "game": "Juego",
+      "player": "Jugador",
+      "placement": "Posición",
+      "relative": "Relativo",
+      "location": "Ubicación",
+      "source": "Fuente"
+    },
+    "locationPending": "Por verificar",
+    "byGame": "Por juego",
+    "byYear": "Por año",
+    "statsTitle": "Estadísticas de la selección",
+    "recordsShown": "Registros en esta selección"
+  },
+  "contentPage": {
+    "eyebrow": "Contenido",
+    "title": "Portfolio en construcción.",
+    "lead": "Aquí publicaremos vídeos, fotografías y publicaciones reales del equipo. Mientras tanto, estos son los formatos que producimos para cada evento.",
+    "empty": "Todavía no hay piezas publicadas en esta web.",
+    "emptyBody": "Preferimos dejar esta sección vacía antes que mostrar contenido que no sea nuestro.",
+    "platforms": "Plataformas preparadas",
+    "ask": "¿Quieres ver material antes de que se publique? Pídenoslo."
+  },
+  "partnersPage": {
+    "eyebrow": "Partners",
+    "title": "Your brand. Our journey.",
+    "lead": "Buscamos marcas que quieran estar en el camino a EVO: no solo en el resultado, sino en todo lo que pasa antes, durante y después.",
+    "fundTitle": "Qué financia tu colaboración",
+    "fund": {
+      "travel": "Viajes",
+      "hotels": "Alojamiento",
+      "fees": "Inscripciones",
+      "gear": "Equipamiento",
+      "production": "Producción audiovisual",
+      "season": "Temporada competitiva"
+    },
+    "idealTitle": "Encaja especialmente con",
+    "ideal": [
+      "Periféricos y arcade sticks",
+      "Tiendas de tecnología y videojuegos",
+      "Ropa y lifestyle gaming",
+      "Hardware y streaming",
+      "Negocios del ecosistema esports"
+    ],
+    "processTitle": "Cómo trabajamos",
+    "process": [
+      {
+        "title": "Conversación",
+        "body": "Entendemos los objetivos y el público de tu marca."
+      },
+      {
+        "title": "Propuesta",
+        "body": "Diseñamos una colaboración a medida: eventos, contenido y entregables."
+      },
+      {
+        "title": "Activación",
+        "body": "Competimos y producimos el contenido acordado."
+      },
+      {
+        "title": "Informe",
+        "body": "Compartimos resultados, piezas publicadas y métricas reales."
+      }
+    ],
+    "promiseTitle": "Lo que prometemos (y lo que no)",
+    "promise": [
+      "Resultados competitivos verificables en fuentes públicas.",
+      "Contenido producido según lo acordado y entregado a tiempo.",
+      "Informes con datos reales después de cada activación.",
+      "No prometemos visualizaciones, seguidores ni conversiones sin datos que lo respalden."
+    ],
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Sois un equipo oficial de EVO?",
+        "a": "No. Somos jugadores independientes que se inscriben y compiten en eventos de EVO. No tenemos relación oficial con Evolution Championship Series."
+      },
+      {
+        "q": "¿Podéis llevar el logo en la equipación?",
+        "a": "Sí, siempre que el reglamento del evento lo permita. Lo concretamos en cada propuesta."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "Cada colaboración se presupuesta a medida según eventos, entregables y duración."
+      },
+      {
+        "q": "¿Qué audiencia tenéis?",
+        "a": "Compartiremos métricas reales de nuestras redes en la propuesta. No mezclamos la audiencia de EVO con la nuestra."
+      }
+    ]
+  },
+  "contactPage": {
+    "eyebrow": "Contacto",
+    "title": "Let's collaborate.",
+    "lead": "Rellena el formulario y se abrirá tu cliente de correo con el mensaje preparado para enviárnoslo.",
+    "company": "Empresa",
+    "name": "Nombre",
+    "email": "Email",
+    "type": "Tipo de colaboración",
+    "typePlaceholder": "Selecciona una opción",
+    "types": {
+      "supporter": "Supporter — colaboración puntual",
+      "event": "Event Partner — un evento",
+      "main": "Main Partner — temporada",
+      "other": "Otro / aún no lo sé"
+    },
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntanos tu marca, objetivos y el tipo de colaboración que imaginas.",
+    "submit": "Preparar email",
+    "how": "Este formulario no envía datos a ningún servidor: abre tu aplicación de correo con el mensaje listo. Tú decides si lo envías.",
+    "opened": "Hemos abierto tu cliente de correo. Si no se abrió, escríbenos a {email}.",
+    "notConfigured": "El email comercial aún no está configurado en esta web. Copia tu mensaje para enviarlo por otro canal.",
+    "copy": "Copiar mensaje",
+    "copied": "Mensaje copiado",
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "email": "Introduce un email válido.",
+      "min": "Escribe al menos {min} caracteres.",
+      "spam": "No hemos podido validar el formulario. Inténtalo de nuevo."
+    },
+    "subject": "Colaboración {type} — {company}",
+    "direct": "Email directo",
+    "response": "Respondemos a propuestas comerciales lo antes posible.",
+    "setup": {
+      "title": "Configuración pendiente (solo visible en desarrollo)",
+      "body": "Añade estas variables en .env.local (o en Vercel → Environment Variables) y vuelve a arrancar/desplegar:"
+    }
+  },
+  "notFound": {
+    "title": "K.O.",
+    "body": "Esta página no existe.",
+    "cta": "Volver al inicio"
+  },
+  "criterion": {
+    "label": "Bracket a su altura o por detrás",
+    "short": "{pct}% del bracket a su altura o por detrás",
+    "title": "Cómo leemos los resultados",
+    "note": "Barra = (participantes − posición) ÷ participantes, calculada torneo a torneo con los datos de start.gg. start.gg publica posiciones empatadas (p. ej. 25.º = empate entre el 25.º y el 32.º), por eso hablamos de «a su altura o por detrás» y no de jugadores superados. «Top X%» = posición ÷ participantes. Nunca sumamos participantes de torneos distintos."
+  },
+  "pitch": {
+    "eyebrow": "En 30 segundos",
+    "who": {
+      "title": "Quiénes somos",
+      "body": "Dos hermanos de Barcelona que compiten en juegos de lucha desde {since}, y una creadora que documenta el viaje."
+    },
+    "results": {
+      "title": "Qué hemos hecho",
+      "body": "{editions} ediciones de EVO entre Las Vegas, Francia y online. Mejor resultado: {placement}.º de {entrants} en {game} ({event})."
+    },
+    "offer": {
+      "title": "Qué ofrecemos",
+      "body": "Presencia de tu marca en torneos internacionales, contenido propio grabado in situ e informes con datos reales."
+    }
+  },
+  "manifesto": {
+    "eyebrow": "Manifiesto",
+    "lines": [
+      "Empezamos en los torneos locales de Barcelona.",
+      "Cruzamos el Atlántico para competir en Las Vegas.",
+      "Volvimos a Europa para jugar EVO France.",
+      "Ahora queremos que tu marca haga el siguiente viaje con nosotros."
+    ],
+    "stops": [
+      {
+        "year": "2018",
+        "place": "Barcelona"
+      },
+      {
+        "year": "2021",
+        "place": "EVO Online"
+      },
+      {
+        "year": "2022",
+        "place": "Las Vegas"
+      },
+      {
+        "year": "2025",
+        "place": "Nice"
+      },
+      {
+        "year": "2027",
+        "place": "Next challenge"
+      }
+    ]
+  },
+  "nextChallenge": {
+    "eyebrow": "Next Challenge",
+    "title": "Temporada {season}",
+    "lead": "Nuestros objetivos para la próxima temporada. Ninguna participación está confirmada todavía; lo indicaremos aquí en cuanto lo esté.",
+    "target": "Objetivo · sin confirmar",
+    "confirmed": "Confirmado",
+    "tbd": "Fechas y sede según anuncie la organización",
+    "names": {
+      "europe-circuit": "Circuito europeo y español"
+    },
+    "expensesTitle": "Qué queremos financiar",
+    "expenses": {
+      "travel": {
+        "title": "Viajes",
+        "body": "Vuelos y desplazamientos a cada evento."
+      },
+      "hotels": {
+        "title": "Alojamiento",
+        "body": "Hotel durante los días de competición."
+      },
+      "fees": {
+        "title": "Inscripciones",
+        "body": "Registro en el torneo y en cada juego."
+      },
+      "gear": {
+        "title": "Equipamiento",
+        "body": "Mandos, arcade sticks y material de competición."
+      },
+      "production": {
+        "title": "Producción",
+        "body": "Material y edición del contenido del viaje."
+      }
+    },
+    "budgetPending": "Presupuesto en preparación",
+    "cta": "Patrocinar la temporada {season}"
+  },
+  "social": {
+    "eyebrow": "Audiencia",
+    "title": "Nuestros canales",
+    "lead": "Solo publicamos métricas reales, leídas de las analíticas de cada plataforma y con fecha.",
+    "followers": "seguidores",
+    "avgViews": "visualizaciones medias",
+    "updated": "Actualizado {date}",
+    "soon": "Próximamente",
+    "none": "Estamos preparando nuestros canales. Compartimos métricas reales en cada propuesta comercial; nunca mezclamos la audiencia de EVO con la nuestra.",
+    "ask": "Solicitar métricas",
+    "videos": "vídeos publicados",
+    "publicSource": "Cifras públicas del canal",
+    "follow": "Seguir",
+    "subscribers": "suscriptores"
+  },
+  "media": {
+    "photoSoon": "Foto próximamente",
+    "videoSoon": "Showreel próximamente",
+    "showreel": "Showreel"
+  },
+  "mediaKit": {
+    "eyebrow": "Media kit",
+    "title": "Todo en un PDF",
+    "body": "Quiénes somos, resultados verificables y modalidades de patrocinio, en un documento para reenviar dentro de tu equipo.",
+    "download": "Descargar media kit (PDF)",
+    "view": "Ver versión web"
+  },
+  "styleNav": {
+    "label": "Estilos",
+    "main": "Web principal",
+    "compare": "Comparar"
+  },
+  "eliteHome": {
+    "rosterTitle": "El roster",
+    "rosterLead": "Dos hermanos de Barcelona en brackets de cientos y miles de jugadores.",
+    "bestLabel": "Mejor resultado",
+    "leaderboardTitle": "Resultados EVO",
+    "leaderboardLead": "Posición final dentro de cada bracket, torneo a torneo.",
+    "contentTitle": "Contenido desde dentro del bracket",
+    "tiersTitle": "Modalidades de patrocinio",
+    "ctaTitle": "Sponsor our journey",
+    "player": "Jugador · Barcelona"
+  }
+}

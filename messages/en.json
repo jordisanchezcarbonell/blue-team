@@ -1,0 +1,599 @@
+{
+  "meta": {
+    "description": "Two brothers from Barcelona competing in fighting games since 2018, plus a content creator. Evo Las Vegas, Evo France and a track record documented on start.gg. Open to sponsors.",
+    "home": "Fighting game players from Barcelona at Evo",
+    "team": "Team",
+    "teamDescription": "Kazukun and BlueKen, competitive fighting game players, and the content creator documenting the journey.",
+    "journey": "Journey 2018–2026",
+    "journeyDescription": "Competitive timeline from Barcelona locals to Evo Las Vegas and Evo France.",
+    "results": "Competitive results",
+    "resultsDescription": "start.gg results history with filters by player, year, game and competition.",
+    "content": "Content",
+    "contentDescription": "Content produced from inside the Fighting Game Community: vertical video, vlogs, interviews and photography.",
+    "partners": "Sponsorship",
+    "partnersDescription": "Sponsor our road to Evo: Supporter, Event Partner and Main Partner packages.",
+    "contact": "Business contact",
+    "contactDescription": "Let's talk about a partnership with your brand."
+  },
+  "nav": {
+    "home": "Home",
+    "team": "Team",
+    "journey": "Journey",
+    "results": "Results",
+    "content": "Content",
+    "partners": "Partners",
+    "contact": "Contact",
+    "cta": "Become a Partner",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "switchTo": "Cambiar a español",
+    "skip": "Skip to content",
+    "main": "Main navigation"
+  },
+  "footer": {
+    "tagline": "Independent fighting game players. Barcelona.",
+    "disclaimer": "We are independent players who compete in Evo tournaments. We are not Evo organisers and have no official relationship with the Evolution Championship Series. All brands mentioned belong to their respective owners.",
+    "sources": "Results verifiable on start.gg",
+    "explore": "Explore",
+    "work": "Work with us",
+    "brandNote": "Provisional name and identity."
+  },
+  "common": {
+    "pending": "Pending",
+    "pendingPhoto": "Real photo pending",
+    "viewOnStartgg": "View on start.gg",
+    "startggProfile": "start.gg profile",
+    "selection": "Selection",
+    "top": "Top {pct}",
+    "entrants": "{count, plural, one {# entrant} other {# entrants}}",
+    "placement": "Placement",
+    "needsReview": "Name to verify",
+    "proposal": "Proposal",
+    "realData": "Verifiable data",
+    "players": {
+      "kazukun": "Kazukun",
+      "blueken": "BlueKen"
+    },
+    "series": {
+      "evo-las-vegas": "Evo Las Vegas",
+      "evo-france": "Evo France",
+      "evo-online": "Evo Online",
+      "hfsplay": "HFSPlay",
+      "other": "Other tournaments"
+    },
+    "format": {
+      "singles": "Singles",
+      "teams": "Teams"
+    },
+    "teamsNote": "Team competition",
+    "online": "Online",
+    "seeAll": "See all",
+    "readMore": "Learn more"
+  },
+  "hero": {
+    "eyebrow": "Barcelona · Fighting Game Community · Since 2018",
+    "subtitle": "Two brothers. One content creator. Years of competing and taking our passion for fighting games to international stages.",
+    "ctaPartner": "Become a Partner",
+    "ctaJourney": "Explore Our Journey",
+    "routeLabel": "Documented competitive route",
+    "scroll": "Scroll"
+  },
+  "teamIntro": {
+    "eyebrow": "The team",
+    "title": "Two players. One creator. One journey.",
+    "body": "We're an independent team: two brothers who compete in fighting games and a creator who documents everything. We don't sell a logo on a shirt — we offer a real story, built one tournament at a time.",
+    "player": "Player",
+    "creator": "Content creator",
+    "profile": "View profile"
+  },
+  "stats": {
+    "eyebrow": "Track record",
+    "title": "Data, not promises.",
+    "note": "Figures calculated from public start.gg records. Entrants from different tournaments are never added together.",
+    "since": "Competing since",
+    "records": "Result records on start.gg",
+    "recordsDetail": "Kazukun {k} · BlueKen {b}",
+    "editions": "Evo editions entered",
+    "editionsDetail": "Las Vegas · France · Online",
+    "games": "Fighting games competed in",
+    "gamesDetail": "In the published selection",
+    "best": "Best relative placement",
+    "bestDetail": "{placement}/{entrants} · {game}"
+  },
+  "highlights": {
+    "eyebrow": "Featured results",
+    "title": "In brackets of hundreds and thousands of players.",
+    "body": "Every result links to its start.gg source. “Top X%” shows the relative placement within that specific tournament.",
+    "cta": "See full history"
+  },
+  "timeline": {
+    "eyebrow": "Timeline",
+    "title": "From Barcelona locals to the Evo stage.",
+    "cta": "See the full journey",
+    "noRecords": "No featured records in the current selection",
+    "next": "Next season",
+    "nextBody": "We're looking for brands to join us for the next competitive season.",
+    "years": {
+      "2018": {
+        "title": "First brackets",
+        "body": "BlueKen starts competing: start.gg records and Barcelona local tournaments begin."
+      },
+      "2021": {
+        "title": "Evo Online",
+        "body": "First Evo appearance, in the online European edition."
+      },
+      "2022": {
+        "title": "First time in Las Vegas",
+        "body": "Both brothers compete at Evo Las Vegas. BlueKen finishes 25th of 411 in Melty Blood: Type Lumina."
+      },
+      "2023": {
+        "title": "The biggest bracket",
+        "body": "Evo Las Vegas with 7,083 Street Fighter 6 entrants. Both compete, and BlueKen again finishes in the top 18% in Melty Blood."
+      },
+      "2024": {
+        "title": "Transition season",
+        "body": "This year's records are pending import into the site."
+      },
+      "2025": {
+        "title": "Evo comes to Europe",
+        "body": "Evo France, HFSPlay and SNTKDD. BlueKen 13th of 135 in Hunter × Hunter Nen × Impact."
+      },
+      "2026": {
+        "title": "New titles, same goal",
+        "body": "Evo France 2026 in Fatal Fury, Marvel Tōkon and Avatar Legends."
+      }
+    }
+  },
+  "evo": {
+    "eyebrow": "What is Evo",
+    "title": "The world's most important fighting game tournament.",
+    "lead": "The Evolution Championship Series (Evo) is the Fighting Game Community's main meeting point: an open tournament where anyone can register and face the world's best in the same bracket.",
+    "whyTitle": "Why competing at Evo matters",
+    "why": [
+      "It's an open tournament: results are earned match by match, not by invitation.",
+      "It brings together the world's elite and thousands of players on the same weekend.",
+      "It's the showcase where publishers announce news and the community meets.",
+      "Competing repeatedly shows commitment, level and the ability to travel and produce content on site."
+    ],
+    "audienceTitle": "Event audience ≠ team audience",
+    "audienceBody": "Evo's figures describe the event, not our community. We use them to give context to the competition, not to promise reach. Any audience metrics of our own will be shared with real data.",
+    "sourcesTitle": "Sources",
+    "disclaimer": "We are not Evo organisers and have no official relationship with the Evolution Championship Series."
+  },
+  "production": {
+    "eyebrow": "Content production",
+    "title": "Content from inside the bracket.",
+    "body": "A dedicated creator documents every trip: preparation, travel, competition and community. Native social content, designed to integrate brands naturally.",
+    "status": "Planned formats — portfolio in progress",
+    "formats": {
+      "vertical": {
+        "title": "Vertical video",
+        "body": "TikTok, Instagram Reels and YouTube Shorts from the venue."
+      },
+      "vlog": {
+        "title": "Travel vlogs",
+        "body": "The road to each event: training, travel and tournament day."
+      },
+      "photo": {
+        "title": "Photography",
+        "body": "Coverage of the event, the team and the community."
+      },
+      "interviews": {
+        "title": "Interviews",
+        "body": "Conversations with players and the community at the event."
+      },
+      "bts": {
+        "title": "Behind the scenes",
+        "body": "What the stream doesn't show: nerves, routines and bracket life."
+      },
+      "branded": {
+        "title": "Branded content",
+        "body": "Pieces agreed with each partner and delivered with a report."
+      }
+    }
+  },
+  "benefits": {
+    "eyebrow": "For your brand",
+    "title": "Your brand. Our journey.",
+    "body": "Brands aren't just paying a tournament entry fee. They're partnering with real players, a documented competitive track record and a project that can produce content from inside the community.",
+    "items": {
+      "authentic": {
+        "title": "Authenticity",
+        "body": "Players who genuinely compete at the genre's biggest tournaments."
+      },
+      "content": {
+        "title": "Own content",
+        "body": "A creator on the team: your brand appears in content produced on site."
+      },
+      "community": {
+        "title": "FGC community",
+        "body": "Presence at the events where the fighting game community gathers."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "body": "Public, verifiable results. Reports after every event."
+      },
+      "local": {
+        "title": "Based in Barcelona",
+        "body": "A Spanish project with European and international reach."
+      },
+      "flexible": {
+        "title": "Flexible formats",
+        "body": "From one-off support to a full-season partnership."
+      }
+    }
+  },
+  "packages": {
+    "eyebrow": "Packages",
+    "title": "Three ways to collaborate.",
+    "body": "Indicative deliverables. We design every partnership together with the brand.",
+    "price": "Custom quote",
+    "cta": "Request a proposal",
+    "featured": "Full season",
+    "tiers": {
+      "supporter": {
+        "name": "Supporter",
+        "tagline": "One-off support",
+        "items": [
+          "Public thank-you",
+          "Social media mention",
+          "Presence on the website",
+          "Event recap"
+        ]
+      },
+      "event": {
+        "name": "Event Partner",
+        "tagline": "Sponsor one competition",
+        "items": [
+          "Brand integration",
+          "Agreed video content",
+          "Dedicated posts",
+          "Branding on apparel, where the event allows it",
+          "Post-event report"
+        ]
+      },
+      "main": {
+        "name": "Main Partner",
+        "tagline": "Season-long partnership",
+        "items": [
+          "Priority visibility",
+          "Content calendar",
+          "Custom activations",
+          "Ongoing collaboration",
+          "Results report"
+        ]
+      }
+    }
+  },
+  "contactCta": {
+    "eyebrow": "Let's collaborate",
+    "title": "Sponsor our journey.",
+    "body": "Tell us what your brand is looking for and we'll send you a tailored proposal.",
+    "cta": "Get in touch",
+    "secondary": "See packages"
+  },
+  "teamPage": {
+    "eyebrow": "Team",
+    "title": "The people behind the project.",
+    "lead": "Two brothers who compete in fighting games and a content creator who documents the journey.",
+    "games": "Games",
+    "events": "Events",
+    "bestResults": "Best results",
+    "allResults": "All their results",
+    "responsibilities": "Responsibilities",
+    "creatorPending": "Name, socials and portfolio to be published.",
+    "records": "{count} records on start.gg",
+    "bios": {
+      "kazukun": "Competitive fighting game player from Barcelona. He has competed at Evo Las Vegas and Evo France in titles such as Street Fighter V, Street Fighter 6, Ultra Street Fighter IV, Fatal Fury: City of the Wolves, Marvel Tōkon and Avatar Legends.",
+      "blueken": "Competitive fighting game player since 2018. He has played Evo Online, Evo Las Vegas, Evo France, HFSPlay, Fighting Holidays and Barcelona locals, with standout results in Melty Blood: Type Lumina, Hunter × Hunter Nen × Impact and Fatal Fury.",
+      "creator": "In charge of the team's content production: documents every trip and produces content for social media and for partners."
+    },
+    "creatorTasks": [
+      "Vertical video",
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts",
+      "Photography",
+      "Vlogs",
+      "Interviews",
+      "Behind the scenes",
+      "Sponsor content"
+    ],
+    "brothers": "Brothers"
+  },
+  "journeyPage": {
+    "eyebrow": "Journey",
+    "title": "2018 → 2026",
+    "lead": "Every milestone with its source. Results come from start.gg; years without featured records are flagged explicitly.",
+    "resultsIn": "Featured results",
+    "jump": "Jump to year"
+  },
+  "resultsPage": {
+    "eyebrow": "Results",
+    "title": "Competitive history.",
+    "lead": "Showing {shown} of the {total} records documented on start.gg. Some records are side events or team competitions, so they don't equal {total} unique tournaments.",
+    "fullHistory": "Full history on start.gg",
+    "filters": "Filters",
+    "showFilters": "Show filters",
+    "applyFilters": "Show {count} results",
+    "player": "Player",
+    "year": "Year",
+    "game": "Game",
+    "competition": "Competition",
+    "all": "All",
+    "search": "Search event, game, city…",
+    "searchLabel": "Search",
+    "sort": "Sort",
+    "sortDateDesc": "Newest first",
+    "sortDateAsc": "Oldest first",
+    "sortBest": "Best relative placement",
+    "reset": "Clear filters",
+    "count": "{count, plural, =0 {No results} one {# result} other {# results}}",
+    "empty": "No results match these filters.",
+    "cols": {
+      "year": "Year",
+      "event": "Event",
+      "game": "Game",
+      "player": "Player",
+      "placement": "Placement",
+      "relative": "Relative",
+      "location": "Location",
+      "source": "Source"
+    },
+    "locationPending": "To verify",
+    "byGame": "By game",
+    "byYear": "By year",
+    "statsTitle": "Selection statistics",
+    "recordsShown": "Records in this selection"
+  },
+  "contentPage": {
+    "eyebrow": "Content",
+    "title": "Portfolio under construction.",
+    "lead": "This is where we'll publish the team's real videos, photos and posts. Meanwhile, these are the formats we produce at every event.",
+    "empty": "No pieces published on this site yet.",
+    "emptyBody": "We'd rather leave this section empty than show content that isn't ours.",
+    "platforms": "Platforms ready",
+    "ask": "Want to see material before it's published? Just ask."
+  },
+  "partnersPage": {
+    "eyebrow": "Partners",
+    "title": "Your brand. Our journey.",
+    "lead": "We're looking for brands that want to be part of the road to Evo — not just the result, but everything before, during and after.",
+    "fundTitle": "What your partnership funds",
+    "fund": {
+      "travel": "Travel",
+      "hotels": "Accommodation",
+      "fees": "Entry fees",
+      "gear": "Equipment",
+      "production": "Content production",
+      "season": "Competitive season"
+    },
+    "idealTitle": "A natural fit for",
+    "ideal": [
+      "Peripherals and arcade sticks",
+      "Tech and video game retailers",
+      "Gaming apparel and lifestyle",
+      "Hardware and streaming",
+      "Esports ecosystem businesses"
+    ],
+    "processTitle": "How we work",
+    "process": [
+      {
+        "title": "Conversation",
+        "body": "We learn your brand's goals and audience."
+      },
+      {
+        "title": "Proposal",
+        "body": "We design a tailored partnership: events, content and deliverables."
+      },
+      {
+        "title": "Activation",
+        "body": "We compete and produce the agreed content."
+      },
+      {
+        "title": "Report",
+        "body": "We share results, published pieces and real metrics."
+      }
+    ],
+    "promiseTitle": "What we promise (and what we don't)",
+    "promise": [
+      "Competitive results verifiable on public sources.",
+      "Content produced as agreed and delivered on time.",
+      "Reports with real data after every activation.",
+      "We don't promise views, followers or conversions without data to back them."
+    ],
+    "faqTitle": "FAQ",
+    "faq": [
+      {
+        "q": "Are you an official Evo team?",
+        "a": "No. We're independent players who register and compete at Evo events. We have no official relationship with the Evolution Championship Series."
+      },
+      {
+        "q": "Can you wear our logo on your apparel?",
+        "a": "Yes, as long as the event rules allow it. We define it in each proposal."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "Every partnership is quoted individually based on events, deliverables and duration."
+      },
+      {
+        "q": "What's your audience?",
+        "a": "We'll share real metrics from our channels in the proposal. We never mix Evo's audience with ours."
+      }
+    ]
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "Let's collaborate.",
+    "lead": "Fill in the form and your email app will open with the message ready to send to us.",
+    "company": "Company",
+    "name": "Name",
+    "email": "Email",
+    "type": "Partnership type",
+    "typePlaceholder": "Choose an option",
+    "types": {
+      "supporter": "Supporter — one-off",
+      "event": "Event Partner — one event",
+      "main": "Main Partner — season",
+      "other": "Other / not sure yet"
+    },
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your brand, your goals and the kind of partnership you have in mind.",
+    "submit": "Prepare email",
+    "how": "This form doesn't send data to any server: it opens your email app with the message ready. You decide whether to send it.",
+    "opened": "We've opened your email app. If it didn't open, write to us at {email}.",
+    "notConfigured": "The business email isn't configured on this site yet. Copy your message to send it through another channel.",
+    "copy": "Copy message",
+    "copied": "Message copied",
+    "errors": {
+      "required": "This field is required.",
+      "email": "Enter a valid email.",
+      "min": "Write at least {min} characters.",
+      "spam": "We couldn't validate the form. Please try again."
+    },
+    "subject": "{type} partnership — {company}",
+    "direct": "Direct email",
+    "response": "We reply to business enquiries as soon as possible.",
+    "setup": {
+      "title": "Pending configuration (development only)",
+      "body": "Add these variables to .env.local (or Vercel → Environment Variables) and restart/redeploy:"
+    }
+  },
+  "notFound": {
+    "title": "K.O.",
+    "body": "This page doesn't exist.",
+    "cta": "Back to home"
+  },
+  "criterion": {
+    "label": "Bracket level with or behind",
+    "short": "{pct}% of the bracket level with or behind",
+    "title": "How we read results",
+    "note": "Bar = (entrants − placement) ÷ entrants, calculated per tournament from start.gg data. start.gg publishes tied placements (e.g. 25th = tied 25th–32nd), so we say \"level with or behind\" rather than players beaten. \"Top X%\" = placement ÷ entrants. We never add up entrants from different tournaments."
+  },
+  "pitch": {
+    "eyebrow": "In 30 seconds",
+    "who": {
+      "title": "Who we are",
+      "body": "Two brothers from Barcelona competing in fighting games since {since}, plus a creator who documents the journey."
+    },
+    "results": {
+      "title": "What we've done",
+      "body": "{editions} Evo editions across Las Vegas, France and online. Best result: {placement} of {entrants} in {game} ({event})."
+    },
+    "offer": {
+      "title": "What we offer",
+      "body": "Your brand at international tournaments, our own content shot on site and reports with real data."
+    }
+  },
+  "manifesto": {
+    "eyebrow": "Manifesto",
+    "lines": [
+      "We started at Barcelona's local tournaments.",
+      "We crossed the Atlantic to compete in Las Vegas.",
+      "We came back to Europe to play Evo France.",
+      "Now we want your brand on the next trip with us."
+    ],
+    "stops": [
+      {
+        "year": "2018",
+        "place": "Barcelona"
+      },
+      {
+        "year": "2021",
+        "place": "Evo Online"
+      },
+      {
+        "year": "2022",
+        "place": "Las Vegas"
+      },
+      {
+        "year": "2025",
+        "place": "Nice"
+      },
+      {
+        "year": "2027",
+        "place": "Next challenge"
+      }
+    ]
+  },
+  "nextChallenge": {
+    "eyebrow": "Next Challenge",
+    "title": "{season} season",
+    "lead": "Our goals for the upcoming season. No participation is confirmed yet; we'll mark it here as soon as it is.",
+    "target": "Goal · not confirmed",
+    "confirmed": "Confirmed",
+    "tbd": "Dates and venue as announced by the organiser",
+    "names": {
+      "europe-circuit": "European & Spanish circuit"
+    },
+    "expensesTitle": "What we want to fund",
+    "expenses": {
+      "travel": {
+        "title": "Travel",
+        "body": "Flights and transport to each event."
+      },
+      "hotels": {
+        "title": "Accommodation",
+        "body": "Hotel during competition days."
+      },
+      "fees": {
+        "title": "Entry fees",
+        "body": "Tournament and per-game registration."
+      },
+      "gear": {
+        "title": "Equipment",
+        "body": "Controllers, arcade sticks and competition gear."
+      },
+      "production": {
+        "title": "Production",
+        "body": "Gear and editing for the trip's content."
+      }
+    },
+    "budgetPending": "Budget in preparation",
+    "cta": "Sponsor the {season} season"
+  },
+  "social": {
+    "eyebrow": "Audience",
+    "title": "Our channels",
+    "lead": "We only publish real metrics, read from each platform's analytics and dated.",
+    "followers": "followers",
+    "avgViews": "average views",
+    "updated": "Updated {date}",
+    "soon": "Coming soon",
+    "none": "We're setting up our channels. We share real metrics in every business proposal and never mix Evo's audience with ours.",
+    "ask": "Request metrics",
+    "videos": "videos published",
+    "publicSource": "Public channel figures",
+    "follow": "Follow",
+    "subscribers": "subscribers"
+  },
+  "media": {
+    "photoSoon": "Photo coming soon",
+    "videoSoon": "Showreel coming soon",
+    "showreel": "Showreel"
+  },
+  "mediaKit": {
+    "eyebrow": "Media kit",
+    "title": "Everything in one PDF",
+    "body": "Who we are, verifiable results and sponsorship packages, in one document to share with your team.",
+    "download": "Download media kit (PDF)",
+    "view": "View web version"
+  },
+  "styleNav": {
+    "label": "Styles",
+    "main": "Main site",
+    "compare": "Compare"
+  },
+  "eliteHome": {
+    "rosterTitle": "The roster",
+    "rosterLead": "Two brothers from Barcelona in brackets of hundreds and thousands of players.",
+    "bestLabel": "Best result",
+    "leaderboardTitle": "Evo results",
+    "leaderboardLead": "Final placement within each bracket, one tournament at a time.",
+    "contentTitle": "Content from inside the bracket",
+    "tiersTitle": "Sponsorship packages",
+    "ctaTitle": "Sponsor our journey",
+    "player": "Player · Barcelona"
+  }
+}
