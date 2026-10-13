@@ -4,6 +4,8 @@
  * links here and they propagate across the whole site (metadata, header,
  * footer, JSON-LD, OG image).
  */
+import { env } from "@/lib/env";
+
 export const siteConfig = {
   name: "BEYOND THE FIGHT",
   shortName: "BTF",
@@ -16,9 +18,9 @@ export const siteConfig = {
   activeSince: 2018,
   /** Last year covered by the documented records. */
   recordsUntil: 2026,
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  /** Commercial contact. Empty until configured via env (see .env.example). */
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "jordigw@gmail.com",
+  url: env.siteUrl,
+  /** Commercial contact (override with NEXT_PUBLIC_CONTACT_EMAIL). */
+  contactEmail: env.contactEmail,
   /** Team social profiles. Add them here once they exist; empty = hidden. */
   social: {
     instagram: "",

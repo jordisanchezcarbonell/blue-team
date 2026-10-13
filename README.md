@@ -36,7 +36,7 @@ npm run build && npm start
 
 | Variable | Obligatoria | Uso |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | En producción | URL pública (sin `/` final). Canonical, Open Graph, `sitemap.xml`, `robots.txt`. Por defecto `http://localhost:3000`. |
+| `NEXT_PUBLIC_SITE_URL` | En producción | URL pública (sin `/` final). Canonical, Open Graph, `sitemap.xml`, `robots.txt`. Por defecto, el dominio de producción de Vercel (`https://blue-team-five.vercel.app`). |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Recomendada | Email comercial. El formulario abre el cliente de correo (`mailto:`) dirigido a esta dirección. Vacía → se usa `jordigw@gmail.com` (`lib/env.ts`). |
 | `NEXT_PUBLIC_BOOKING_URL` | Opcional | Enlace para agendar una llamada de 15 minutos (Calendly, Cal.com…). Aparece en `/contact` y en las propuestas por marca. |
 | `NEXT_PUBLIC_ANALYTICS` | Opcional | `true` activa Vercel Web Analytics (sin cookies). Actívalo también en el proyecto de Vercel. Registra visitas por página y eventos de conversión (copiar email, abrir correo, descargar media kit, agendar llamada). |
@@ -167,7 +167,7 @@ Añade piezas reales a `contentItems` en `data/content.ts`. YouTube se incrusta 
 1. Sube el repo a GitHub/GitLab.
 2. En Vercel: **Add New → Project** e importa el repo. Framework: Next.js (autodetectado).
 3. **Settings → General → Node.js Version**: 22.x.
-4. **Settings → Environment Variables**: añade `NEXT_PUBLIC_SITE_URL` (p. ej. `https://beyondthefight.gg`) y `NEXT_PUBLIC_CONTACT_EMAIL`.
+4. **Settings → Environment Variables**: solo hacen falta `NEXT_PUBLIC_STYLE_NAV=false` y `NEXT_PUBLIC_ANALYTICS=true` (URL y email tienen valor por defecto).
 5. Deploy. Al cambiar variables `NEXT_PUBLIC_*` hay que volver a desplegar (se incrustan en el build).
 6. Añade el dominio en **Settings → Domains** y actualiza `NEXT_PUBLIC_SITE_URL`.
 

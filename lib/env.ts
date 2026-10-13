@@ -3,7 +3,12 @@
  * `missingConfig` lists what still needs to be set (shown in development and in the README).
  */
 export const env = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "",
+  /** Explicit URL, else Vercel's production domain (auto-set, follows a custom domain), else the current deployment. */
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`
+      : "https://blue-team-five.vercel.app"),
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "jordigw@gmail.com",
   /** Floating style navigation (main site ↔ design proposals). Set "false" before sending to brands. */
   showStyleNav: process.env.NEXT_PUBLIC_STYLE_NAV !== "false",
