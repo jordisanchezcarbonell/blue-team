@@ -439,7 +439,7 @@
   "contactPage": {
     "eyebrow": "Contact",
     "title": "Let's collaborate.",
-    "lead": "Fill in the form and your email app will open with the message ready to send to us.",
+    "lead": "Email us directly. We reply ourselves — no middlemen, no forms.",
     "company": "Company",
     "name": "Name",
     "email": "Email",
@@ -471,7 +471,17 @@
     "setup": {
       "title": "Pending configuration (development only)",
       "body": "Add these variables to .env.local (or Vercel → Environment Variables) and restart/redeploy:"
-    }
+    },
+    "write": "Write to us",
+    "include": "What to include",
+    "includeItems": [
+      "Company and contact person.",
+      "Partnership type: Supporter, Event Partner, Main Partner, or not sure yet.",
+      "Event or dates you're interested in (e.g. Evo France 2027).",
+      "What the brand is after: visibility, content, product at tournaments…"
+    ],
+    "templateNote": "The button opens your email app with the subject and this template already filled in.",
+    "mediaKit": "Download media kit (PDF)"
   },
   "notFound": {
     "title": "K.O.",
@@ -720,7 +730,6 @@
     "calendarTitle": "{season} season",
     "ctaTitle": "Shall we talk?",
     "ctaBody": "We'll reply with a firm proposal (deliverables, schedule and budget) based on what {brand} is looking for.",
-    "ctaForm": "Write via the form",
     "more": "See the full site",
     "mediaKit": "Download media kit (PDF)"
   },
@@ -734,8 +743,8 @@
         "body": "{name}, an independent team of fighting game players from Barcelona. Contact: {email}."
       },
       {
-        "title": "Contact form",
-        "body": "The form sends no data to any server: it opens your email app with the message ready and you decide whether to send it. If you write to us, we use your email only to reply and manage the potential partnership."
+        "title": "Contact",
+        "body": "There's no form: you write from your own email. If you contact us, we only use your email to reply and manage the potential partnership."
       },
       {
         "title": "Cookies",
@@ -754,5 +763,19 @@
         "body": "You can request access, correction or deletion of your data by writing to {email}."
       }
     ]
+  },
+  "compose": {
+    "cta": "Write an email",
+    "interest": "You're interested in",
+    "types": {
+      "supporter": "Supporter",
+      "event": "Event Partner",
+      "main": "Main Partner",
+      "other": "Other collaboration"
+    },
+    "subjectFull": "{type} partnership — {company}",
+    "subjectType": "{type} partnership — {name}",
+    "subjectGeneric": "Partnership with {name}",
+    "body": "Hi,\n\nCompany: {company}\nPartnership type: {type}\nEvent or dates: \nWhat you're looking for: \n\n"
   }
 }

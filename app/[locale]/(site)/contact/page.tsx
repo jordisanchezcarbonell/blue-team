@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { Check, Download } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import { Suspense } from "react";
-import { ContactForm } from "@/components/contact/contact-form";
+import { TrackedAnchor } from "@/components/analytics/tracked-anchor";
+import { ComposeEmail, ComposeEmailFromQuery } from "@/components/contact/compose-email";
 import { EmailActions } from "@/components/contact/email-actions";
 import { PageHero } from "@/components/layout/page-hero";
 import { Container } from "@/components/ui/container";
@@ -17,6 +19,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/contact"
 export default function ContactPage() {
   const t = useTranslations("contactPage");
   const pk = useTranslations("packages");
+  const locale = useLocale();
 
   return (
     <>
@@ -38,15 +41,34 @@ export default function ContactPage() {
       )}
       <Container className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
         <div className="relative bg-surface/50 p-6 ring-1 ring-inset ring-line sm:p-10">
-          <Suspense fallback={<div className="h-[36rem]" aria-hidden />}>
-            <ContactForm />
+          <h2 className="font-display text-3xl uppercase text-snow sm:text-4xl">{t("write")}</h2>
+          <Suspense fallback={<ComposeEmail source="contact" className="mt-6" />}>
+            <ComposeEmailFromQuery source="contact" className="mt-6" />
           </Suspense>
+          <h3 className="mt-10 text-xs font-bold uppercase tracking-[0.2em] text-snow">{t("include")}</h3>
+          <ul className="mt-4 space-y-3">
+            {(t.raw("includeItems") as string[]).map((item) => (
+              <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted">
+                <Check aria-hidden className="mt-0.5 size-4 shrink-0 text-cyan" /> {item}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 border-l-4 border-magenta pl-3 text-xs text-muted">{t("templateNote")}</p>
         </div>
         <aside className="space-y-10">
           <div>
             <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-snow">{t("direct")}</h2>
             <EmailActions source="contact" className="mt-3" />
             <p className="mt-3 text-sm text-muted">{t("response")}</p>
+            <TrackedAnchor
+              href={`/media-kit/beyond-the-fight-media-kit-${locale}.pdf`}
+              download
+              event="media_kit_download"
+              props={{ source: "contact" }}
+              className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-snow hover:text-cyan"
+            >
+              <Download aria-hidden className="size-4" /> {t("mediaKit")}
+            </TrackedAnchor>
           </div>
           <div>
             <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-snow">{pk("eyebrow")}</h2>

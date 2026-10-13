@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { TrackedAnchor } from "@/components/analytics/tracked-anchor";
+import { ComposeEmail } from "@/components/contact/compose-email";
 import { EmailActions } from "@/components/contact/email-actions";
 import { ReportSample } from "@/components/partners/report-sample";
 import { siteConfig } from "@/config/site";
@@ -228,13 +229,8 @@ export default async function ProposalPage({ params }: PageProps<"/[locale]/prop
             <p className="mt-6 max-w-md text-ink/80">{t("ctaBody", { brand: name })}</p>
           </div>
           <div className="space-y-5 lg:col-span-5 lg:col-start-8">
+            <ComposeEmail type={proposal.tier} company={name} source={`proposal:${proposal.slug}`} tone="light" />
             <EmailActions source={`proposal:${proposal.slug}`} tone="light" />
-            <Link
-              href={{ pathname: "/contact", query: { type: proposal.tier, company: name } }}
-              className="block bg-ink px-6 py-4 text-center text-sm font-bold uppercase tracking-wider text-cyan shadow-[5px_5px_0_var(--color-snow)] transition-shadow hover:shadow-[2px_2px_0_var(--color-snow)]"
-            >
-              {t("ctaForm")} ▶
-            </Link>
             <Link href="/" className="block text-center text-xs font-bold uppercase tracking-widest underline underline-offset-4">
               {t("more")}
             </Link>

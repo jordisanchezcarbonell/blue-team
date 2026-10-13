@@ -439,7 +439,7 @@
   "contactPage": {
     "eyebrow": "Contacto",
     "title": "Let's collaborate.",
-    "lead": "Rellena el formulario y se abrirá tu cliente de correo con el mensaje preparado para enviárnoslo.",
+    "lead": "Escríbenos directamente al email. Respondemos nosotros, sin intermediarios ni formularios.",
     "company": "Empresa",
     "name": "Nombre",
     "email": "Email",
@@ -471,7 +471,17 @@
     "setup": {
       "title": "Configuración pendiente (solo visible en desarrollo)",
       "body": "Añade estas variables en .env.local (o en Vercel → Environment Variables) y vuelve a arrancar/desplegar:"
-    }
+    },
+    "write": "Escríbenos",
+    "include": "Qué incluir en el email",
+    "includeItems": [
+      "Empresa y persona de contacto.",
+      "Tipo de colaboración: Supporter, Event Partner, Main Partner o aún no lo sabéis.",
+      "Evento o fechas que os interesan (por ejemplo, EVO France 2027).",
+      "Qué busca la marca: visibilidad, contenido, producto en torneo…"
+    ],
+    "templateNote": "El botón abre tu correo con el asunto y esta plantilla ya escritos.",
+    "mediaKit": "Descargar media kit (PDF)"
   },
   "notFound": {
     "title": "K.O.",
@@ -720,7 +730,6 @@
     "calendarTitle": "Temporada {season}",
     "ctaTitle": "¿Hablamos?",
     "ctaBody": "Respondemos con una propuesta cerrada (entregables, calendario y presupuesto) en función de lo que busque {brand}.",
-    "ctaForm": "Escribir con el formulario",
     "more": "Ver la web completa",
     "mediaKit": "Descargar media kit (PDF)"
   },
@@ -734,8 +743,8 @@
         "body": "{name}, equipo independiente de jugadores de juegos de lucha de Barcelona. Contacto: {email}."
       },
       {
-        "title": "Formulario de contacto",
-        "body": "El formulario no envía datos a ningún servidor: abre tu aplicación de correo con el mensaje preparado y tú decides si lo envías. Si nos escribes, usamos tu email solo para responderte y gestionar la posible colaboración."
+        "title": "Contacto",
+        "body": "No hay formulario: escribes desde tu propio correo. Si nos escribes, usamos tu email solo para responderte y gestionar la posible colaboración."
       },
       {
         "title": "Cookies",
@@ -754,5 +763,19 @@
         "body": "Puedes pedir acceso, rectificación o supresión de tus datos escribiendo a {email}."
       }
     ]
+  },
+  "compose": {
+    "cta": "Escribir email",
+    "interest": "Te interesa",
+    "types": {
+      "supporter": "Supporter",
+      "event": "Event Partner",
+      "main": "Main Partner",
+      "other": "Otra colaboración"
+    },
+    "subjectFull": "Colaboración {type} — {company}",
+    "subjectType": "Colaboración {type} — {name}",
+    "subjectGeneric": "Colaboración con {name}",
+    "body": "Hola,\n\nEmpresa: {company}\nTipo de colaboración: {type}\nEvento o fechas: \nQué buscáis: \n\n"
   }
 }
