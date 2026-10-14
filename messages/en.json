@@ -237,32 +237,29 @@
         "name": "Supporter",
         "tagline": "One-off support",
         "items": [
-          "Public thank-you",
-          "Social media mention",
-          "Presence on the website",
-          "Event recap"
+          "Basic logo placement",
+          "Social mention",
+          "Inclusion in the partner section"
         ]
       },
       "event": {
         "name": "Event Partner",
         "tagline": "Sponsor one competition",
         "items": [
-          "Brand integration",
-          "Agreed video content",
-          "Dedicated posts",
-          "Branding on apparel, where the event allows it",
-          "Post-event report"
+          "Association with one tournament",
+          "Logo on event pieces and mentions",
+          "Product integration",
+          "Event content, photos and recap"
         ]
       },
       "main": {
         "name": "Main Partner",
         "tagline": "Season-long partnership",
         "items": [
-          "Priority visibility",
-          "Content calendar",
-          "Custom activations",
-          "Ongoing collaboration",
-          "Results report"
+          "Season-long visibility and jersey placement",
+          "Recurring content and product integration",
+          "Dedicated posts or videos",
+          "Event visibility and possible presenting rights"
         ]
       }
     }
@@ -574,6 +571,12 @@
       }
     },
     "budgetPending": "Budget in preparation",
+    "roadmapTitle": "Roadmap {season}",
+    "players": "Players",
+    "objective": "Objective",
+    "plannedContent": "Planned content",
+    "sponsorship": "Sponsorship",
+    "available": "Available",
     "cta": "Sponsor the {season} season"
   },
   "social": {
@@ -777,5 +780,36 @@
     "subjectType": "{type} partnership — {name}",
     "subjectGeneric": "Partnership with {name}",
     "body": "Hi,\n\nCompany: {company}\nPartnership type: {type}\nEvent or dates: \nWhat you're looking for: \n\n"
+  },
+  "sponsorHome": {
+    "downloadMediaKit": "Download media kit",
+    "flexibility": "Flexible support: cash sponsorship, products, travel, accommodation, peripherals, apparel or services. We scope every collaboration around the activation.",
+    "heroStats": {
+      "sinceValue": "Since 2018", "sinceLabel": "Competing", "sinceDetail": "Documented start.gg history",
+      "tournamentsValue": "60+", "tournamentsLabel": "Result records", "tournamentsDetail": "Publicly documented",
+      "eventsValue": "EVO · FGC", "eventsLabel": "International stages", "eventsDetail": "Las Vegas · France · Online",
+      "resultValue": "Top 6.1%", "resultLabel": "At EVO France", "resultDetail": "BlueKen · 13th/135 · 2025"
+    },
+    "partnerReasons": {
+      "title": "Why partner with us", "lead": "Competition, a specialised community and content made from inside the event.",
+      "items": [
+        {"title": "International events", "body": "Physical presence at EVO and international fighting game competitions."},
+        {"title": "Authentic FGC audience", "body": "A real, specialised audience inside fighting games — never event reach presented as our own."},
+        {"title": "Content + competition", "body": "We compete and document the trip, players and event around every activation."}
+      ]
+    },
+    "evoFrance": {
+      "eyebrow": "Proof of execution", "title": "Blue Team Five at EVO France 2026", "lead": "We already competed in person at EVO France. The verified results below show the competitive side; content reporting is kept ready for real data.",
+      "resultsLabel": "Verified placements", "resultsNote": "Only records without a pending verification flag are shown here. Every placement links to its public start.gg source.", "evidenceLabel": "Event evidence", "contentPieces": "Content pieces generated", "views": "Reach / views", "highlights": "Mentions / highlights", "pending": "Metrics pending", "transition": "We already competed at EVO France. Now we’re building the next stage — with a brand able to join at the start.", "nextStop": "Next stop: EVO Japan"
+    },
+    "audience": {
+      "title": "Audience & reach", "lead": "A channel-by-channel view built for reporting. Missing figures stay visible as editable placeholders until analytics are available.", "totalViews": "Total content views", "pending": "Metrics pending", "handlePending": "Handle pending", "followers": "followers", "subscribers": "subscribers", "published": "published pieces", "viewsWindow": "views (30/90 days)", "updated": "Updated {date}", "publicSource": "Public channel figures", "none": "We only report channel data that can be verified."
+    },
+    "content": {
+      "title": "Content deliverables", "lead": "Sponsorship includes a content plan, not just logo placement. Deliverables are agreed per activation and reported after the event.", "deliverableNote": "Defined with the partner for the activation.",
+      "deliverables": ["Tournament vlog", "Short-form videos", "Product integration", "Player interviews", "Event photography", "Brand mentions", "Dedicated post", "Recap content", "Logo integration"]
+    },
+    "evoRoad": {"eyebrow": "Blue Team Five at EVO", "body": "France 2026 proved the team can execute on site. Japan, Las Vegas and the next FGC events are the upcoming partner activations.", "cta": "See the 2027 roadmap"},
+    "finalCta": {"body": "Join Blue Team Five on the road to EVO Japan and the 2027 season."}
   }
 }

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { EvoExplainer } from "@/components/home/evo-explainer";
 import { UgHero, UgPitch } from "@/components/underground/hero";
 import {
   UgAudience,
   UgContent,
   UgContinue,
+  UgEvoFranceCaseStudy,
+  UgEvoRoad,
   UgManifesto,
   UgNextChallenge,
+  UgPartnerReasons,
   UgResults,
   UgRoster,
-  UgStages,
   UgTiers,
 } from "@/components/underground/sections";
 import type { Locale } from "@/i18n/routing";
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]">): Prom
 /**
  * Home — "C · FGC Underground" as the main design (the previous A · Esports Elite
  * home lives on in components/elite and /designs/esports). Ordered for a 30-second
- * read: who → results → offer, then detail.
+ * read: credibility → proof → audience → sponsor deliverables → next activation.
  */
 export default function HomePage() {
   return (
@@ -33,10 +34,11 @@ export default function HomePage() {
       <UgManifesto />
       <UgRoster />
       <UgResults />
-      <UgStages />
+      <UgPartnerReasons />
+      <UgEvoFranceCaseStudy />
       <UgAudience />
       <UgContent />
-      <EvoExplainer />
+      <UgEvoRoad />
       <UgNextChallenge />
       <UgTiers />
       <UgContinue />

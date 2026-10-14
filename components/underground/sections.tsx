@@ -2,6 +2,7 @@ import { Download } from "lucide-react";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { TrackedAnchor } from "@/components/analytics/tracked-anchor";
 import { PhotoSlot, VideoSlot } from "@/components/elite/media-slot";
+import { EvoExplainer } from "@/components/home/evo-explainer";
 import { siteConfig } from "@/config/site";
 import { contentItems } from "@/data/content";
 import { journeyYears } from "@/data/journey";
@@ -18,6 +19,74 @@ import { cn } from "@/lib/utils";
 import { UgTitle } from "./hero";
 
 const container = "mx-auto max-w-7xl px-4 sm:px-6 lg:px-10";
+
+/* ───────────────────────── Why partner ───────────────────────── */
+export function UgPartnerReasons() {
+  const t = useTranslations("sponsorHome.partnerReasons");
+  const items = t.raw("items") as { title: string; body: string }[];
+  return (
+    <section aria-labelledby="partner-reasons-title" className="border-y-2 border-line bg-snow py-20 text-ink lg:py-28">
+      <div className={container}>
+        <UgTitle id="partner-reasons-title" title={t("title")} lead={t("lead")} tone="light" />
+        <ol className="mt-12 grid gap-4 md:grid-cols-3">
+          {items.map((item, i) => (
+            <li key={item.title} className="border-2 border-ink p-6 sm:p-8">
+              <span className="font-display text-4xl text-magenta">0{i + 1}</span>
+              <h3 className="mt-8 font-display text-3xl uppercase leading-none">{item.title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-ink/65">{item.body}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── EVO France proof point ───────────────────────── */
+export function UgEvoFranceCaseStudy() {
+  const t = useTranslations("sponsorHome.evoFrance");
+  const locale = useLocale() as Locale;
+  const results = getResults({ sort: "best" }).filter((r) => r.year === 2026 && r.series === "evo-france" && r.format === "singles" && !r.needsReview);
+
+  return (
+    <section id="evo-france" aria-labelledby="evo-france-title" className="scroll-mt-14 py-20 lg:py-28">
+      <div className={container}>
+        <p className="inline-block -rotate-1 bg-magenta px-2.5 py-1 text-[11px] font-bold uppercase tracking-widest text-ink">{t("eyebrow")}</p>
+        <UgTitle id="evo-france-title" title={t("title")} lead={t("lead")} />
+        <div className="mt-12 grid gap-4 lg:grid-cols-12">
+          <div className="border-2 border-cyan p-6 sm:p-8 lg:col-span-7">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-cyan">{t("resultsLabel")}</p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {results.map((result) => (
+                <a key={result.id} href={result.sourceUrl} target="_blank" rel="noopener noreferrer" className="group border border-line p-4 transition-colors hover:border-cyan">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-snow/45">{result.player === "kazukun" ? "P1 KAZUKUN" : "P2 BLUEKEN"}</p>
+                  <p className="mt-3 font-display text-3xl uppercase leading-none text-cyan">{result.placement}/{result.entrants.toLocaleString(locale)}</p>
+                  <p className="mt-2 text-xs text-muted">{result.game} · start.gg ↗</p>
+                </a>
+              ))}
+            </div>
+            <p className="mt-6 text-xs leading-relaxed text-muted">{t("resultsNote")}</p>
+          </div>
+          <div className="border-2 border-dashed border-snow/25 p-6 lg:col-span-5">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-snow/45">{t("evidenceLabel")}</p>
+            <div className="mt-5 grid grid-cols-2 gap-3">
+              {["PHOTO", "CLIPS"].map((label) => <div key={label} className="flex aspect-video items-center justify-center border border-snow/15 bg-snow/[0.03] font-display text-2xl text-snow/25">{label}</div>)}
+            </div>
+            <dl className="mt-6 space-y-3 text-sm">
+              <div className="flex justify-between gap-4 border-b border-snow/10 pb-3"><dt>{t("contentPieces")}</dt><dd className="text-muted">{t("pending")}</dd></div>
+              <div className="flex justify-between gap-4 border-b border-snow/10 pb-3"><dt>{t("views")}</dt><dd className="text-muted">{t("pending")}</dd></div>
+              <div className="flex justify-between gap-4"><dt>{t("highlights")}</dt><dd className="text-muted">{t("pending")}</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div className="mt-8 flex flex-col justify-between gap-5 border-l-4 border-magenta bg-snow/[0.04] p-6 sm:flex-row sm:items-center">
+          <p className="max-w-2xl text-sm leading-relaxed text-snow/75">{t("transition")}</p>
+          <a href="#roadmap" className="whitespace-nowrap text-xs font-bold uppercase tracking-widest text-cyan hover:text-snow">{t("nextStop")} →</a>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 /* ───────────────────────── Manifesto ───────────────────────── */
 export function UgManifesto() {
@@ -269,23 +338,27 @@ export function UgStages() {
 
 /* ───────────────────────── Channels ───────────────────────── */
 export function UgAudience() {
-  const t = useTranslations("social");
+  const t = useTranslations("sponsorHome.audience");
   const format = useFormatter();
-  const channels = socialChannels.filter((c) => c.url);
-  const soon = socialChannels.filter((c) => !c.url);
+  const channels = socialChannels.filter((c) => ["tiktok", "instagram", "youtube", "x"].includes(c.platform));
+  const totalViews = socialChannels.reduce<number | null>((sum, channel) => channel.avgViews === null || sum === null ? null : sum + channel.avgViews, 0);
 
   return (
     <section aria-labelledby="audience-title" className="border-t-2 border-line py-20 lg:py-28">
       <div className={container}>
         <UgTitle id="audience-title" title={t("title")} lead={t("lead")} />
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-y border-line py-4">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-cyan">{t("totalViews")}</span>
+          <span className="font-display text-3xl uppercase">{totalViews === null ? t("pending") : format.number(totalViews)}</span>
+        </div>
         <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {channels.map((c) => (
             <li key={c.platform}>
-              <a href={c.url} target="_blank" rel="noopener noreferrer" className="group flex h-full flex-col border-2 border-line p-5 transition-colors hover:border-cyan">
+              <a href={c.url || undefined} target={c.url ? "_blank" : undefined} rel={c.url ? "noopener noreferrer" : undefined} className="group flex h-full flex-col border-2 border-line p-5 transition-colors hover:border-cyan">
                 <span className="flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-muted">
-                  {c.label} <span aria-hidden className="transition-colors group-hover:text-cyan">↗</span>
+                  {c.label} {c.url && <span aria-hidden className="transition-colors group-hover:text-cyan">↗</span>}
                 </span>
-                <span className="mt-2 break-all text-xs text-snow/80">{c.handle}</span>
+                <span className="mt-2 break-all text-xs text-snow/80">{c.handle || t("handlePending")}</span>
                 <dl className="mt-6 space-y-3">
                   {c.followers !== null && (
                     <div className="flex flex-col-reverse">
@@ -295,18 +368,18 @@ export function UgAudience() {
                   )}
                   {c.contentCount !== null && (
                     <div className="flex flex-col-reverse">
-                      <dt className="text-[11px] text-muted">{t("videos")}</dt>
+                      <dt className="text-[11px] text-muted">{t("published")}</dt>
                       <dd className="font-display text-4xl leading-none">{format.number(c.contentCount)}</dd>
                     </div>
                   )}
                   {c.avgViews !== null && (
                     <div className="flex flex-col-reverse">
-                      <dt className="text-[11px] text-muted">{t("avgViews")}</dt>
+                      <dt className="text-[11px] text-muted">{t("viewsWindow")}</dt>
                       <dd className="font-display text-4xl leading-none">{format.number(c.avgViews)}</dd>
                     </div>
                   )}
                   {c.followers === null && c.contentCount === null && c.avgViews === null && (
-                    <dd className="font-display text-2xl uppercase leading-none text-snow/80">{t("follow")} ▶</dd>
+                    <dd className="font-display text-lg uppercase leading-none text-snow/45">{t("pending")}</dd>
                   )}
                 </dl>
                 {c.updatedAt && (
@@ -315,12 +388,6 @@ export function UgAudience() {
                   </span>
                 )}
               </a>
-            </li>
-          ))}
-          {soon.map((c) => (
-            <li key={c.platform} className="flex flex-col justify-between border-2 border-dashed border-snow/15 p-5">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-muted">{c.label}</span>
-              <span className="mt-8 font-display text-xl uppercase text-snow/30">{t("soon")}</span>
             </li>
           ))}
         </ul>
@@ -333,6 +400,7 @@ export function UgAudience() {
 /* ───────────────────────── Replays — content ───────────────────────── */
 export function UgContent() {
   const t = useTranslations();
+  const sponsor = useTranslations("sponsorHome.content");
   const locale = useLocale() as Locale;
   const youtube = socialChannels.find((c) => c.platform === "youtube" && c.url);
 
@@ -340,16 +408,16 @@ export function UgContent() {
     <section id="content" aria-labelledby="content-title" className="scroll-mt-14 border-y-2 border-line py-20 lg:py-28">
       <div className={cn(container, "grid gap-12 lg:grid-cols-12")}>
         <div className="lg:col-span-5">
-          <h2 id="content-title" className="font-display text-[clamp(2rem,3.7vw,3.4rem)] uppercase leading-[0.95]">{t("ugHome.replayTitle")}</h2>
-          <p className="mt-6 text-sm leading-relaxed text-muted">{t("production.body")}</p>
+          <h2 id="content-title" className="font-display text-[clamp(2rem,3.7vw,3.4rem)] uppercase leading-[0.95]">{sponsor("title")}</h2>
+          <p className="mt-6 text-sm leading-relaxed text-muted">{sponsor("lead")}</p>
           <ul className="mt-8">
-            {(["vertical", "vlog", "photo", "interviews", "bts", "branded"] as const).map((k, i) => (
-              <li key={k} className="group grid grid-cols-[auto_1fr] items-baseline gap-x-5 border-b border-snow/10 py-4">
+            {(sponsor.raw("deliverables") as string[]).map((item, i) => (
+              <li key={item} className="group grid grid-cols-[auto_1fr] items-baseline gap-x-5 border-b border-snow/10 py-4">
                 <span className="text-xs text-magenta">
                   <span aria-hidden className="inline-block size-2 rounded-full bg-magenta group-hover:animate-pulse" /> REC.{String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="font-display text-xl uppercase transition-transform group-hover:translate-x-2 sm:text-2xl">{t(`production.formats.${k}.title`)}</span>
-                <span className="col-start-2 mt-1 text-xs text-snow/55">{t(`production.formats.${k}.body`)}</span>
+                <span className="font-display text-xl uppercase transition-transform group-hover:translate-x-2 sm:text-2xl">{item}</span>
+                <span className="col-start-2 mt-1 text-xs text-snow/55">{sponsor("deliverableNote")}</span>
               </li>
             ))}
           </ul>
@@ -392,6 +460,25 @@ export function UgContent() {
   );
 }
 
+/* ───────────────────────── EVO context, connected to the team ───────────────────────── */
+export function UgEvoRoad() {
+  const t = useTranslations("sponsorHome.evoRoad");
+  return (
+    <>
+      <EvoExplainer />
+      <section className="border-y-2 border-line bg-snow py-12 text-ink">
+        <div className={container}>
+          <p className="text-[10px] font-bold uppercase tracking-widest text-magenta">{t("eyebrow")}</p>
+          <div className="mt-4 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+            <p className="max-w-3xl font-display text-[clamp(1.6rem,4vw,3rem)] uppercase leading-none">{t("body")}</p>
+            <a href="#roadmap" className="text-xs font-bold uppercase tracking-widest text-ink underline underline-offset-4">{t("cta")} →</a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 /* ───────────────────────── Next stage — 2027 ───────────────────────── */
 export function UgNextChallenge() {
   const t = useTranslations("nextChallenge");
@@ -401,15 +488,15 @@ export function UgNextChallenge() {
   const total = keys.every((k) => expenses[k] !== null) ? keys.reduce((s, k) => s + (expenses[k] ?? 0), 0) : null;
 
   return (
-    <section id="next-challenge" aria-labelledby="next-title" className="relative isolate scroll-mt-14 overflow-hidden py-20 lg:py-28">
+    <section id="roadmap" aria-labelledby="next-title" className="relative isolate scroll-mt-14 overflow-hidden py-20 lg:py-28">
       <div aria-hidden className="bg-halftone absolute -right-16 top-0 -z-10 size-[32rem] text-cyan opacity-15 [mask-image:radial-gradient(circle,black,transparent_70%)]" />
       <div className={container}>
         <p className="inline-block -rotate-1 bg-cyan px-2.5 py-1 text-[11px] font-bold uppercase tracking-widest text-ink">{t("eyebrow")}</p>
-        <h2 id="next-title" className="mt-5 font-display text-[clamp(2.6rem,9vw,7rem)] uppercase leading-[0.88]">{t("title", { season })}</h2>
+        <h2 id="next-title" className="mt-5 font-display text-[clamp(2.6rem,9vw,7rem)] uppercase leading-[0.88]">{t("roadmapTitle", { season })}</h2>
         <p className="mt-6 max-w-2xl text-muted">{t("lead")}</p>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-12">
-          <ul className="space-y-3 self-start lg:col-span-5">
+          <ul className="space-y-3 self-start lg:col-span-7">
             {targets.map((target) => (
               <li key={target.id} className="border-2 border-line p-5">
                 <div className="flex flex-wrap items-center justify-between gap-3">
@@ -426,6 +513,12 @@ export function UgNextChallenge() {
                   </span>
                 </div>
                 <p className="mt-2 text-xs text-muted">{[target.when, target.where].filter(Boolean).join(" · ") || t("tbd")}</p>
+                <dl className="mt-5 grid gap-3 border-t border-line pt-4 text-xs sm:grid-cols-2">
+                  <div><dt className="uppercase tracking-widest text-snow/40">{t("players")}</dt><dd className="mt-1 text-snow/80">{target.players ?? t("tbd")}</dd></div>
+                  <div><dt className="uppercase tracking-widest text-snow/40">{t("objective")}</dt><dd className="mt-1 text-snow/80">{target.objective}</dd></div>
+                  <div><dt className="uppercase tracking-widest text-snow/40">{t("plannedContent")}</dt><dd className="mt-1 text-snow/80">{target.plannedContent}</dd></div>
+                  <div><dt className="uppercase tracking-widest text-snow/40">{t("sponsorship")}</dt><dd className="mt-1 font-bold uppercase tracking-wider text-cyan">{target.sponsorshipAvailable ? t("available") : t("tbd")}</dd></div>
+                </dl>
               </li>
             ))}
           </ul>
@@ -515,6 +608,7 @@ export function UgTiers() {
             );
           })}
         </div>
+        <p className="mt-8 border-l-4 border-magenta bg-snow/[0.04] p-5 text-sm leading-relaxed text-muted">{t("sponsorHome.flexibility")}</p>
 
         {/* Media kit */}
         <div className="mt-10 grid gap-6 border-2 border-dashed border-snow/25 p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
@@ -546,18 +640,20 @@ export function UgTiers() {
 /* ───────────────────────── Continue? ───────────────────────── */
 export function UgContinue() {
   const t = useTranslations();
+  const sponsor = useTranslations("sponsorHome.finalCta");
   return (
     <section aria-labelledby="cta-title" className="relative isolate overflow-hidden bg-magenta py-24 text-ink lg:py-32">
       <div aria-hidden className="bg-halftone absolute inset-0 -z-10 text-ink opacity-15" />
       <div className={container}>
         <h2 id="cta-title" className="font-display text-[clamp(2.6rem,9vw,8rem)] uppercase leading-[0.9]">{t("ugHome.continue")}</h2>
         <div className="mt-10 flex flex-col gap-8 border-t-2 border-ink pt-8 sm:flex-row sm:items-end sm:justify-between">
-          <p className="max-w-md text-ink/80">{t("contactCta.body")}</p>
+          <p className="max-w-md text-ink/80">{sponsor("body")}</p>
           <div className="flex items-end gap-6">
             <span aria-hidden className="font-display text-7xl leading-[0.75] text-ink/85 sm:text-8xl">9</span>
-            <Link href="/contact" className="bg-ink px-6 py-4 text-sm font-bold uppercase tracking-wider text-cyan shadow-[5px_5px_0_var(--color-snow)] transition-shadow hover:shadow-[2px_2px_0_var(--color-snow)]">
-              Let&apos;s collaborate ▶
-            </Link>
+            <div className="flex flex-col gap-3">
+              <Link href="/contact" className="bg-ink px-6 py-4 text-center text-sm font-bold uppercase tracking-wider text-cyan shadow-[5px_5px_0_var(--color-snow)] transition-shadow hover:shadow-[2px_2px_0_var(--color-snow)]">{t("hero.ctaPartner")} ▶</Link>
+              <Link href="/media-kit" className="text-center text-xs font-bold uppercase tracking-widest text-ink underline underline-offset-4">{t("sponsorHome.downloadMediaKit")}</Link>
+            </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@ import { siteConfig } from "@/config/site";
 import { players } from "@/data/team";
 import { Link } from "@/i18n/navigation";
 import { getStats } from "@/lib/results/repository";
-import { formatTopPercent } from "@/lib/results/stats";
 import { cn } from "@/lib/utils";
 
 /** Section title shared by the home sections: big Dela Gothic heading + optional lead. */
@@ -33,20 +32,13 @@ export function UgTitle({
 
 export function UgHero() {
   const t = useTranslations();
-  const stats = getStats();
-  const best = stats.best!;
-  const { documentedRecords: rec } = siteConfig;
   const [p1, p2] = players;
 
   const numbers = [
-    { value: String(siteConfig.activeSince), label: t("stats.since"), detail: "start.gg" },
-    { value: String(rec.total), label: t("stats.records"), detail: t("stats.recordsDetail", { k: rec.kazukun, b: rec.blueken }) },
-    { value: String(stats.evoEditions.length), label: t("stats.editions"), detail: t("stats.editionsDetail") },
-    {
-      value: `Top ${formatTopPercent(best.placement, best.entrants)}`,
-      label: t("stats.best"),
-      detail: t("stats.bestDetail", { placement: best.placement, entrants: best.entrants, game: best.game }),
-    },
+    { value: t("sponsorHome.heroStats.sinceValue"), label: t("sponsorHome.heroStats.sinceLabel"), detail: t("sponsorHome.heroStats.sinceDetail") },
+    { value: t("sponsorHome.heroStats.tournamentsValue"), label: t("sponsorHome.heroStats.tournamentsLabel"), detail: t("sponsorHome.heroStats.tournamentsDetail") },
+    { value: t("sponsorHome.heroStats.eventsValue"), label: t("sponsorHome.heroStats.eventsLabel"), detail: t("sponsorHome.heroStats.eventsDetail") },
+    { value: t("sponsorHome.heroStats.resultValue"), label: t("sponsorHome.heroStats.resultLabel"), detail: t("sponsorHome.heroStats.resultDetail") },
   ];
 
   return (
@@ -90,8 +82,8 @@ export function UgHero() {
             >
               {t("hero.ctaPartner")} ▶
             </Link>
-            <Link href="/journey" className="border-2 border-snow px-5 py-3 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-snow hover:text-ink">
-              {t("hero.ctaJourney")}
+            <Link href="/media-kit" className="border-2 border-snow px-5 py-3 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-snow hover:text-ink">
+              {t("sponsorHome.downloadMediaKit")}
             </Link>
           </div>
         </div>

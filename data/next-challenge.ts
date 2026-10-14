@@ -12,6 +12,10 @@ export interface ChallengeTarget {
   when: string | null;
   where: string | null;
   status: ChallengeStatus;
+  players: string | null;
+  objective: string;
+  plannedContent: string;
+  sponsorshipAvailable: boolean;
 }
 
 export type ExpenseKey = "travel" | "hotels" | "fees" | "gear" | "production";
@@ -25,9 +29,10 @@ export const nextChallenge: {
 } = {
   season: "2027",
   targets: [
-    { id: "evo-2027", name: "EVO 2027", when: null, where: null, status: "target" },
-    { id: "evo-france-next", name: "EVO France", when: null, where: null, status: "target" },
-    { id: "europe-circuit", name: "European & Spanish circuit", when: null, where: null, status: "target" },
+    { id: "evo-japan", name: "EVO Japan", when: null, where: "Japan", status: "target", players: "Kazukun + BlueKen", objective: "International competition", plannedContent: "Travel, tournament and recap content", sponsorshipAvailable: true },
+    { id: "evo-france-next", name: "EVO France", when: null, where: "France", status: "target", players: "Kazukun + BlueKen", objective: "European EVO activation", plannedContent: "Tournament coverage and short-form content", sponsorshipAvailable: true },
+    { id: "evo-las-vegas", name: "EVO Las Vegas", when: null, where: "Las Vegas, USA", status: "target", players: "Kazukun + BlueKen", objective: "Flagship international event", plannedContent: "Vlog, player stories and brand recap", sponsorshipAvailable: true },
+    { id: "europe-circuit", name: "Other FGC events", when: null, where: null, status: "target", players: "TBD", objective: "Relevant European and Spanish competitions", plannedContent: "Defined per activation", sponsorshipAvailable: true },
   ],
   currency: "EUR",
   expenses: { travel: null, hotels: null, fees: null, gear: null, production: null },
